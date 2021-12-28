@@ -1,0 +1,108 @@
+title: Blog
+'@extends':
+    type: default
+    context: blueprints://pages
+
+child_type: item
+
+
+title: Default
+
+rules:
+  slug:
+    pattern: "[a-z][a-z0-9_-]+"
+    min: 2
+    max: 80
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        advanced:
+          fields:
+            overrides:
+              fields:
+                header.child_type:
+                  default: item
+        blog:
+          type: tab
+          title: TELEPHASIC.ADMIN.BLOG.TAB
+
+          fields:
+
+            content_title:
+              type: spacer
+              title: TELEPHASIC.ADMIN.BLOG.CONTENT.TITLE
+
+            header.content.items:
+              type: textarea
+              yaml: true
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ITEMS
+              default: '@self.children'
+              validate:
+                type: yaml
+
+            header.content.limit:
+              type: text
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.LIMIT
+              default: 5
+              validate:
+                required: true
+                type: int
+                min: 1
+
+            header.content.order.by:
+              type: select
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY
+              default: date
+              options:
+                folder: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_FOLDER
+                title: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_TITLE
+                date: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_DATE
+                default: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.BY_DEFAULT
+
+            header.content.order.dir:
+              type: select
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.DIR
+              default: desc
+              options:
+                asc: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.DIR_ASC
+                desc: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.ORDER.DIR_DESC
+
+            header.content.pagination:
+              type: toggle
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.PAGINATION
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            header.content.url_taxonomy_filters:
+              type: toggle
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.URL_TAXONOMY_FILTERS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            header.content.taxonomy_color:
+              type: select
+              size: small
+              label: 'TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.URL_TAXONOMY_COLOR'
+              default: blue
+              options:
+                lightblue: 'LightBlue'
+                lightyellow: 'LightYellow'
+                lightsalmon: 'LightSalmon'
+                lightgray: 'LightGray'
+          import@:
+            type: partials/blog-bits
+            context: blueprints://pages

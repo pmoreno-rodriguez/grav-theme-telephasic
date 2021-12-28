@@ -1,0 +1,24 @@
+title: Promo Page
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        promo:
+          type: tab
+          title: TELEPHASIC.ADMIN.MODULAR.PROMO.TAB
+          fields:
+            content_title:
+              type: spacer
+              title: TELEPHASIC.ADMIN.MODULAR.PROMO.OPTIONS
+            header.button_text:
+              type: text
+              label: TELEPHASIC.ADMIN.MODULAR.PROMO.BUTTON_TEXT
+              style: vertical
+            header.button_url:
+              type: text
+              label: TELEPHASIC.ADMIN.MODULAR.PROMO.BUTTON_URL
+              style: vertical

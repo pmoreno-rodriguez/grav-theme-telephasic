@@ -1,0 +1,42 @@
+title: Features2 Page
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        features2:
+          type: tab
+          title: TELEPHASIC.ADMIN.MODULAR.FEATURES.TAB
+          fields:
+            header.class:
+              type: select
+              label: TELEPHASIC.ADMIN.MODULAR.FEATURES.LAYOUT.LABEL
+              default: standard
+              size: medium
+              options:
+                medium: TELEPHASIC.ADMIN.MODULAR.FEATURES.LAYOUT.TWOCOLS
+                standard: TELEPHASIC.ADMIN.MODULAR.FEATURES.LAYOUT.THREECOLS
+            header.buttontext:
+              type: text
+              label: TELEPHASIC.ADMIN.MODULAR.FEATURES.BUTTON_TEXT
+            header.buttonurl:
+              type: text
+              label: TELEPHASIC.ADMIN.MODULAR.FEATURES.BUTTON_URL
+            header.features2:
+              name: features2
+              type: list
+              label: TELEPHASIC.ADMIN.MODULAR.FEATURES.HEADER
+              fields:
+                .image:
+                  type: pagemediaselect
+                  label: TELEPHASIC.ADMIN.MODULAR.FEATURES.IMAGE
+                  preview_images: true
+                .text:
+                  type: textarea
+                  minlength: 10
+                  maxlength: 500
+                  rows: 5
+                  label: TELEPHASIC.ADMIN.MODULAR.FEATURES.TEXT

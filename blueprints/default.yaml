@@ -1,0 +1,44 @@
+title: Generic Page
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          fields:
+            header.options:
+              type: columns
+              ordering@: header.title
+              fields:
+
+                header.content:
+                  type: column
+                  fields:
+                    header.subtitle:
+                      type: text
+                      style: vertical
+                      label: TELEPHASIC.ADMIN.ITEM.CONTENT.SUBTITLE
+                header.image:
+                  type: column
+                  fields:
+                    
+                    header.primaryImage:
+                      type: pagemediaselect
+                      style: vertical
+                      label: TELEPHASIC.ADMIN.DEFAULT.PRIMARY_IMAGE
+                      preview_images: true
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                   fields:
+                     header.body_classes:
+                       markdown: true
+                       description: 'Body class in Telephasic Theme for homepage only:<br />`homepage`'

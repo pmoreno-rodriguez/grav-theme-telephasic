@@ -1,0 +1,48 @@
+form:
+  fields:
+
+    toggles_title:
+      type: spacer
+      title: TELEPHASIC.ADMIN.BLOG.CONTENT.CONFIGURATION
+
+    header.blog_url:
+      type: text
+      toggleable: true
+      label: TELEPHASIC.ADMIN.BLOG.BLOG_PAGE
+      help: TELEPHASIC.ADMIN.BLOG.BLOG_HELP
+      default: '/blog'
+      placeholder: '/blog'
+      size: medium
+
+    header.show_sidebar:
+      type: toggle
+      toggleable: true
+      label:  TELEPHASIC.ADMIN.BLOG.CONTENT.SHOW_SIDEBAR
+      highlight: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    header.show_breadcrumbs:
+      type: toggle
+      toggleable: true
+      label:  TELEPHASIC.ADMIN.BLOG.CONTENT.SHOW_BREADCRUMBS
+      highlight: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    header.show_pagination:
+      type: toggle
+      toggleable: true
+      label:  TELEPHASIC.ADMIN.BLOG.CONTENT.SHOW_PAGINATION
+      highlight: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool

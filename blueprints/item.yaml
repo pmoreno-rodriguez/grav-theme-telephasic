@@ -1,0 +1,69 @@
+title: Item
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        blog:
+          type: tab
+          title: TELEPHASIC.ADMIN.ITEM.TAB
+
+          fields:
+
+            summary:
+              type: section
+              title: TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.SUMMARY
+              underline: true
+
+            header.author:
+              type: selectize
+              size: medium
+              label: TELEPHASIC.ADMIN.ITEM.CONTENT.AUTHOR
+
+            header.avatarImage:
+              type: pagemediaselect
+              size: medium
+              label: TELEPHASIC.ADMIN.ITEM.CONTENT.AVATAR
+              preview_images: true
+
+            header.summary.enabled:
+              type: toggle
+              toggleable: true
+              label: TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.ENABLED
+              highlight: 1
+              options:
+                1: Enabled
+                0: Disabled
+
+            header.summary.format:
+              type: select
+              toggleable: true
+              label: TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT
+              classes: fancy
+              options:
+                'short': TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT.SHORT
+                'long': TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT.LONG
+
+            header.summary.size:
+              type: text
+              toggleable: true
+              label: TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.SUMMARY_SIZE
+              classes: large
+              placeholder: 300
+              validate:
+                type: int
+                min: 1
+
+            header.summary.delimiter:
+              type: text
+              toggleable: true
+              label: TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.SUMMARY_DELIMITER
+              classes: large
+              placeholder: ===
+
+          import@:
+            type: partials/item-bits

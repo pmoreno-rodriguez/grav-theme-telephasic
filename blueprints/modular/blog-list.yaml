@@ -1,0 +1,38 @@
+title: Blog List
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        bloglist:
+          type: tab
+          title: TELEPHASIC.ADMIN.MODULAR.RECENT_POSTS.TAB
+          fields:
+            header.layout:
+              type: select
+              label: TELEPHASIC.ADMIN.MODULAR.RECENT_POSTS.LAYOUT.LABEL
+              default: standard
+              size: medium
+              options:
+                medium: TELEPHASIC.ADMIN.MODULAR.RECENT_POSTS.LAYOUT.TWO_COLS
+                standard: TELEPHASIC.ADMIN.MODULAR.RECENT_POSTS.LAYOUT.THREE_COLS
+            header.blog_url:
+              type: text
+              toggleable: true
+              label: Blog Route
+              help: The route to the main blog page that contains the "Show ..." configuration
+              default: '/blog'
+              placeholder: '/blog'
+              size: medium
+            header.limit:
+              type: number
+              label: TELEPHASIC.ADMIN.MODULAR.RECENT_POSTS.LIMIT
+              default: 3
+              validate:
+                required: true
+                type: int
+                min: 1
+                max: 6
