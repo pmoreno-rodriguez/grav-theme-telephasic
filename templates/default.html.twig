@@ -1,0 +1,22 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+<div class="page-wrapper">
+<div class="wrapper">
+<div class="container" id="main">
+      <header>
+          <h2>{{page.title|raw}}</h2>
+          {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
+          {% if page.header.primaryImage %}
+              <img src="{{ page.media[page.header.primaryImage].url|e}}" class="image featured" loading="lazy" alt="{{page.title}}" /></a>
+          {% endif %}
+      </header>
+      <div>
+        {{ page.content|raw }}
+      </div>
+</div>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,308 @@
+en:
+  TELEPHASIC:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Dropdown in navbar
+        PRODUCTION_MODE: Production Mode
+        PRODUCTION_MODE_HELP: When enabled, TELEPHASIC will render with minified CSS
+        FAVICON: Choose your own favicon
+        CUSTOM_FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
+        CUSTOM_LOGO: Custom Logo
+        CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
+        CUSTOM_LOGO_MOBILE: Mobile Custom Logo
+        SLOGAN: Slogan
+        BLOG_DEFAULTS: Blog Defaults
+        BLOG_PAGE_LABEL: Blog Page
+        BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
+        HERO_OPTIONS:
+          LABEL: Hero Options
+          TITLE: Hero Title
+          SUBTITLE: Hero Subtitle
+          BUTTON_TEXT: Button text
+          BUTTON_URL: Button URL
+
+        FEATUREDPOSTS: Enable Featured posts in Sidebar
+        FEATUREDPOSTS_NUMBER: Featured posts number to show
+        FEATUREDPOSTS_NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
+        FOOTER: 
+          LABEL: Footer
+          CONTACT:
+            FORM_TITLE: Contact Form Title
+            FORM_SUBTITLE: Contact Form Subtitle
+            TITLE: Contact Us
+            SUBTITLE: Send Us your comments
+            BUTTON_URL: Button URL
+          SOCIALS:
+            ICONS: Social Icons
+            ICON_NAME: Social Name
+            ICON_URL: URL Link to Social
+            ICON_ICON: Icon to Social
+            ICON_HELP: Write only the icon name according to `<a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" target="_blank">FontAwesome</a>` (without fa preffix)
+          COPYRIGHT:
+            AUTHOR: Website author
+            RIGHTS: Text for author rights
+      DEFAULT:
+        PRIMARY_IMAGE: Primary image
+      MODULAR:
+        BANNER:
+          TAB: Banner
+          SUBTITLE: Subtitle
+          BUTTON_TEXT: Button Text
+          BUTTON_URL: Button URL
+          IMAGE: Image
+          IMAGE_DESCRIPTION: Select one image
+        FEATURES:
+          TAB: Features
+          LAYOUT: 
+            LABEL: Layout
+            TWOCOLS: Medium   = 2 / 1 columns
+            THREECOLS: Standard  = 3 / 2 / 1 columns
+          HEADER: Features
+          IMAGE: Image
+          TITLE: Title
+          TEXT: Text
+          BUTTON_TEXT: Button Text
+          BUTTON_URL: Button URL
+          BUTTON_URL_TARGET: Open URL in a new window
+        PROMO:
+          TAB: Promo
+          OPTIONS: Options
+          BUTTON_TEXT: Button Text
+          BUTTON_URL: Button URL
+        RECENT_POSTS:
+          TAB: Recent Posts
+          LAYOUT:
+            LABEL: Layout
+            TWO_COLS: Medium   = 2 / 1 columns
+            THREE_COLS: Standard  = 3 / 2 / 1 columns
+          LIMIT: Limit 
+      BLOG:
+        TAB: Blog Config
+        BLOG_PAGE: Blog Page
+        BLOG_HELP: The route to the main blog page that contains the "Show ..." configuration
+        CONTENT:
+          TITLE: Content Definition
+          CONFIGURATION: Configuration
+          SHOW_BREADCRUMBS: Show Breadcrumbs
+          SHOW_SIDEBAR: Show Sidebar
+          SHOW_PAGINATION: Show Pagination
+          ITEMS: 
+            ITEMS: Items
+            LIMIT: Max Item Count
+            ORDER:
+              BY: Order By
+              BY_DATE: Date
+              BY_TITLE: Title
+              BY_FOLDER: Folder
+              BY_DEFAULT: Default
+              DIR: Direction
+              DIR_ASC: Ascending
+              DIR_DESC: Descending
+            PAGINATION: Pagination
+            URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+            TAXONOMY_COLOR: CSS classes for taxonomy
+      ITEM:
+        TAB: Blog Item
+        CONTENT:
+          OPTIONS:
+            LABEL: Options 
+            SUMMARY:
+              SUMMARY: Summary Item
+              ENABLED: Enabled Summary
+              FORMAT: Summary Format
+              FORMAT_SHORT: Use the first occurence of delimter or size
+              FORMAT_LONG: Summary delimiter will be ignored
+              SUMMARY_SIZE: Size
+              SUMMARY_DELIMITER: Summary Delimiter
+          ORDER: Minipost Order
+          SUBTITLE: Subtitle
+          AUTHOR: Author
+          AVATAR: Avatar Image
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Continue reading...
+        NEXT_POST: Next Post
+        PREV_POST: Previous Post
+      PAGINATION:
+        PREVIOUS: Previous
+        NEXT: Next
+      SEARCH:
+        RESULTS: Search Results
+
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Search
+      RELATED_POSTS:
+        HEADLINE: Related Posts
+      RANDOM_ARTICLE:
+        HEADLINE: Random Article
+        FEELING_LUCKY: I'm Feeling Lucky!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Some Text Widget
+      TAGS:
+        HEADLINE: Tags
+      POPULAR_TAGS:
+        HEADLINE: Popular Tags
+      ARCHIVES:
+        HEADLINE: Archives
+      SYNDICATE:
+        HEADLINE: Syndicate
+    LOGIN: Log in
+    LATESTPOSTS: Latest posts
+    FEATURED: Featured
+    PRIVACY: By using this form you agree to our
+    FORM_SUMMARY: Here is the summary of what you wrote to us
+
+es:
+  TELEPHASIC:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Menu Desplegable
+        PRODUCTION_MODE: Modo Producción
+        PRODUCTION_MODE_HELP: Si está activado, TELEPHASIC cargará con CSS minificado
+        FAVICON: Elige tu propio favicon
+        CUSTOM_FAVICON_DESCRIPTION: Este favicon se usará en lugar del favicon por defecto `theme://images/favicon.png`
+        CUSTOM_LOGO: Logo personalizado
+        CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del logo por defecto `theme://images/logo.png`
+        CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
+        SLOGAN: Slogan
+        BLOG_DEFAULTS: Opciones de Blog
+        BLOG_PAGE_LABEL: Página de Blog
+        BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
+        HERO_OPTIONS:
+          LABEL: Opciones de cabecera
+          TITLE: Título de cabecera
+          SUBTITLE: Subtítulo de cabecera
+          BUTTON_TEXT: Texto del botón
+          BUTTON_URL: URL del botón
+        FEATUREDPOSTS: Activar artículos destacados en la barra lateral
+        FEATUREDPOSTS_NUMBER: Número de artículos destacados a mostrar
+        FEATUREDPOSTS_NUMBER_DESCRIPTION: Número de artículos destacados que se mostrarán en la barra lateral
+        FOOTER: 
+          LABEL: Pie de página
+          CONTACT:
+            FORM_TITLE: Título para el formulario de contacto
+            FORM_SUBTITLE: Subtítulo para el formulario de contacto
+            TITLE: Contacta con nosotros
+            SUBTITLE: Envíenos sus comentarios
+            BUTTON_URL: URL del botón
+          SOCIALS:
+            ICONS: Iconos Redes Sociales
+            ICON_NAME: Nombre de Red Social
+            ICON_URL: Enlace de la Red Social
+            ICON_ICON: Icono de Red Social
+            ICON_HELP: Escriba sólo el nombre del icono según se indica en `<a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" target="_blank">FontAwesome</a>` (sin el prefijo fa)
+          COPYRIGHT:
+            AUTHOR: Author del sitio
+            RIGHTS: Texto para los derechos de autor
+      DEFAULT:
+        PRIMARY_IMAGE: Imagen principal
+      MODULAR:
+        BANNER:
+          TAB: Banner
+          SUBTITLE: Subtítulo
+          BUTTON_TEXT: Texto del botón
+          BUTTON_URL: URL del botón
+          IMAGE: Imagen
+          IMAGE_DESCRIPTION: SSeleccione una imagen
+        FEATURES:
+          TAB: Funciones
+          LAYOUT: 
+            LABEL: Diseño
+            TWOCOLS: Medio   = 2 / 1 columnas
+            THREECOLS: Estándar  = 3 / 2 / 1 columnas
+          IMAGE: Imagen
+          TITLE: Título
+          TEXT: Texto
+          BUTTON_TEXT: Button Text
+          BUTTON_URL: Button URL
+          BUTTON_URL_TARGET: Open URL in a new window
+        PROMO:
+          TAB: Promo
+          OPTIONS: Options
+          BUTTON_TEXT: Texto del botón
+          BUTTON_URL: URL del botón
+        RECENT_POSTS:
+          TAB: Entradas Recientes
+          LAYOUT:
+            LABEL: Diseño
+            TWOCOLS: Medio   = 2 / 1 columnas
+            THREECOLS: Estándar  = 3 / 2 / 1 columnas
+          LIMIT: Limite 
+      BLOG:
+        TAB: Configuración del Blog
+        BLOG_PAGE: Página de Blog
+        BLOG_HELP: La ruta de la página principal del Blog que contiene "Mostrar ..." en la configuración
+        CONTENT:
+          TITLE: Definición de Contenido
+          CONFIGURATION: Configuración
+          SHOW_BREADCRUMBS: Mostrar Migas de pan
+          SHOW_SIDEBAR: Mostrar Barra Lateral
+          SHOW_PAGINATION: Mostrar Paginación
+          ITEMS: 
+            ITEMS: Artículos
+            LIMIT: Límite máximo de artículos
+            ORDER:
+              BY: Ordenar por
+              BY_DATE: Fecha
+              BY_TITLE: Título
+              BY_FOLDER: Carpeta
+              BY_DEFAULT: Por defecto
+              DIR: Dirección
+              DIR_ASC: Ascendente
+              DIR_DESC: Descendente
+            PAGINATION: Paginación
+            URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
+            TAXONOMY_COLOR: Clases CSS para la taxonomía
+      ITEM:
+        TAB: Artículo de Blog
+        CONTENT:
+          OPTIONS:
+            LABEL: Opciones 
+            SUMMARY:
+              SUMMARY: Resumen de Artículo
+              ENABLED: Activar Resumen
+              FORMAT: Formato de Resumen
+              FORMAT_SHORT: Utilizar la primera aparición de delimitador o tamaño
+              FORMAT_LONG: Se ignorará el delimitador de resumen
+              SUMMARY_SIZE: Tamaño
+              SUMMARY_DELIMITER: Delimitador de Resumen
+          ORDER: Orden del Minipost
+          SUBTITLE: Subtítulo
+          AUTHOR: Autor
+          AVATAR: Imagen de Avatar
+    BLOG:
+      ITEM:
+        CONTINUE_READING: Continuar leyendo...
+        NEXT_POST: Siguiente Entrada
+        PREV_POST: Entrada Anterior
+      PAGINATION:
+        PREVIOUS: Anterior
+        NEXT: Siguiente
+      SEARCH:
+        RESULTS: Resultados de la búsqueda
+
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Buscar
+      RELATED_POSTS:
+        HEADLINE: Entradas Relacionadas
+      RANDOM_ARTICLE:
+        HEADLINE: Artículo Aleatorio
+        FEELING_LUCKY: Voy a tener suerte!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Algunos Widget de Texto
+      TAGS:
+        HEADLINE: Etiquetas
+      POPULAR_TAGS:
+        HEADLINE: Etiquetas Populares
+      ARCHIVES:
+        HEADLINE: Archivo
+      SYNDICATE:
+        HEADLINE: Distribuir
+    LOGIN: Iniciar sesión
+    LATESTPOSTS: Últimos artículos
+    FEATURED: Destacados
+    PRIVACY: Al usar este formulario estás de acuerdo con nuestra
+    FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
+

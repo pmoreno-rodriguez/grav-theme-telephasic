@@ -1,0 +1,85 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set favicon = config.theme.favicon ? config.theme.favicon|first : { type:'image/png', path: url('theme://images/favicon.png') } %}
+
+{# {% set logo = config.theme.logo ? config.theme.logo|first : {type:'image/png', path: url('theme://images/logo.png') } %} #}
+
+<!DOCTYPE HTML>
+<!--
+	Telephasic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+	<head>
+	{% block head deferred %}
+		<link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}" />
+		<link rel="shortcut icon" href="{{ url( favicon.path ) }}">
+		<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		{% include 'partials/metadata.html.twig' %}
+	{% endblock head %}
+
+	{% block stylesheets %}
+		{% do assets.addCss('theme://assets/css/main'~compress) %}
+		{% do assets.addCss('theme://assets/css/custom.css', 10) %}
+	{% endblock %}
+
+
+	{% block javascripts %}
+		{% do assets.addJs('jquery',101) %}
+		{% do assets.addJs('theme://assets/js/jquery.dropotron.min.js', {group:'bottom'}) %}
+		{% do assets.addJs('theme://assets/js/browser.min.js', {group:'bottom'}) %}
+		{% do assets.addJs('theme://assets/js/breakpoints.min.js', {group:'bottom'}) %}
+		{% do assets.addJs('theme://assets/js/util.js', {group:'bottom'}) %}
+		{% do assets.addJs('theme://assets/js/main.js', {group:'bottom'}) %}
+	{% endblock %}
+
+	{% block assets deferred %}
+	    {{ assets.css()|raw }}
+	    {{ assets.js()|raw }}
+	{% endblock %}
+
+	
+	</head>
+	<body class="{% block body_classes %}{{ header.body_classes }}{% endblock %} is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			{% block header %}
+				<div id="header-wrapper">
+					<div id="header" class="container">
+
+						<h1 id="logo"><a href="{{home_url}}">{{ site.title|e }}</a></h1>
+
+					<nav id="nav">
+						{% block navigation %}
+							{% include 'partials/navigation.html.twig' %}
+						{% endblock %}	
+					</nav>
+
+					</div>
+
+					{% if page.home() %}
+						{% block hero %} {% include 'partials/hero.html.twig' %} {% endblock %}
+					{% endif %}
+
+				</div>
+			{% endblock %} 
+
+			{% block content %}{% endblock %}
+
+			{% block footer %}
+				{% include 'partials/footer.html.twig' %}
+			{% endblock %}
+
+		</div>
+
+		<!-- Scripts -->
+		{% block bottom %}
+			{{ assets.js('bottom')|raw }}
+		{% endblock %}
+
+	</body>
+</html>

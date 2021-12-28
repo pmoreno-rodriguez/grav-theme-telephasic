@@ -1,0 +1,41 @@
+{% set columns = page.header.class == 'standard' ? 'col-4 col-12-narrower' : 'col-6 col-12-narrower'  %}
+
+	<div class="wrapper">
+		<div class="container">
+			<header>
+			    {% if page.header.primaryImage %}
+			        <img src="{{ page.media[page.header.primaryImage].cropZoom(1000,200).url|e}}" class="image featured" loading="lazy" alt="{{page.title}}" /></a>
+			    {% endif %}
+			    <h2>{{page.title|raw}}</h2>
+			    {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
+			</header>
+			<div class="row">
+
+				{% for item in page.header.features %}
+
+				<section class="{{columns}} feature">
+					{% if item.image %}
+						<div class="image-wrapper {% if loop.first %}first{% endif %}">
+							<a href="{{item.url}}" class="image featured {% if loop.first %}first{% endif %}"><img src="{{page.media[item.image].url}}" loading="lazy" alt="{{page.title}}" rel="nofollow" /></a>
+						</div>
+					{% endif %}
+					{% if item.title %}
+						<header>
+							<h2>{{item.title|raw}}</h2>
+						</header>
+					{% endif %}
+					{% if item.text %}
+						<p>{{item.text|raw}}</p>
+					{% endif %}
+					{% if item.buttonurl %}
+						<ul class="actions">
+							<li><a href="{{item.buttonurl}}" class="button" rel="nofollow">{{item.buttontext}}</a></li>
+						</ul>
+					{% endif %}
+				</section>
+
+				{% endfor %}
+
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,54 @@
+
+
+{% if page.header.author %}
+    {% set author =  page.header.author %}
+{% else %}
+    {% set author =  page.header.taxonomy.author[0] %}
+{% endif %}
+
+<article id="content">
+                
+<header>
+    {% if page.header.primaryImage %}
+        <img src="{{ page.media[page.header.primaryImage].url|e}}" class="image featured" loading="lazy" alt="{{page.title}}" /></a>
+    {% endif %}
+    <h2>{{page.title|raw}}</h2>
+    {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
+</header>
+
+{{ page.content|raw }}
+
+{% if author %}
+    <div >
+        <a href="{{ blog.url|rtrim('/') }}/author{{ config.system.param_sep }}{{ author }}" itemprop="keywords">{{ tag }}{% if page.header.avatarImage %}<img src="{{ page.media[page.header.avatarImage].url|e}}" class="avatar" alt="{{ author }}" />{% endif %}<span rel="author"> {{ author }} </span></a>
+    </div>
+{% endif %}
+
+{% if config.plugins.taxonomylist.enabled and page.taxonomy.tag is not empty %}
+    <span>
+       <i class="fas fa-tags"></i>
+        {% for tag in page.taxonomy.tag %}
+        <a class="" href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+    </span>
+{% endif %}
+{% if page.taxonomy.category %}
+    <span>
+        <i class="fas fa-link fa-md"></i>
+        {% for category in page.taxonomy.category %}
+            <a class="tags" title="{{ 'See other posts of ' ~ (category|capitalize) }}"
+             href="{{ blog.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+        {% endfor %}
+    </span>
+{% endif %}
+
+</article>
+
+<div>
+    {% if not page.isLast %}
+        <a class="button" href="{{ page.prevSibling.url }}" rel="prev"><i class="fas fa-angle-left"></i> {{'TELEPHASIC.BLOG.PAGINATION.PREVIOUS'|t}}</a>
+    {% endif %}
+    {% if not page.isFirst %}
+        <a class="button" href="{{ page.nextSibling.url }}" rel="next">{{'TELEPHASIC.BLOG.PAGINATION.NEXT'|t}} <i class="fas fa-angle-right"></i></a>
+    {% endif %}
+</div>

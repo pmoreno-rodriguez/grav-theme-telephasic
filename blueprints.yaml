@@ -1,0 +1,170 @@
+name: Telephasic
+version: 1.0.0
+description: "Telephasic Grav Theme (ported from HTML5Up)"
+icon: group
+author:
+  name: Pedro Moreno
+  email: pmoreno.rodriguez@outlook.com
+  url: 
+homepage: 
+keywords: telephasic, minimalist, theme, modern, fast, responsive, html5, css3, blog
+bugs: 
+license: CC-BY-3.0
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+  - archives
+  - pagination
+  - simplesearch
+  - taxonomylist
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: TELEPHASIC.ADMIN.THEME.DROPDOWN_MENU
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+    production-mode:
+      type: toggle
+      label: TELEPHASIC.ADMIN.THEME.PRODUCTION_MODE
+      help: TELEPHASIC.ADMIN.THEME.PRODUCTION_MODE_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    favicon:
+      type: file
+      label: TELEPHASIC.ADMIN.THEME.FAVICON
+      description: TELEPHASIC.ADMIN.THEME.CUSTOM_FAVICON_DESCRIPTION
+      markdown: true
+      destination: 'theme@:/images/ico'
+      multiple: false
+      avoid_overwriting: false
+      random_name: false
+      toggleable: true
+      filesize: 3
+      accept: ['image/png', '.ico']
+ 
+    logo:
+      type: file
+      label: TELEPHASIC.ADMIN.THEME.CUSTOM_LOGO
+      size: large
+      destination: 'theme://images/logo'
+      multiple: false
+      markdown: true
+      description: TELEPHASIC.ADMIN.THEME.CUSTOM_LOGO_DESCRIPTION
+      accept:
+        - image/png
+
+    blog_section:
+      type: section
+      title: TELEPHASIC.ADMIN.THEME.BLOG_DEFAULTS
+      underline: true
+
+    blog-page:
+      type: text
+      label: TELEPHASIC.ADMIN.THEME.BLOG_PAGE_LABEL
+      help: TELEPHASIC.ADMIN.THEME.BLOG_PAGE_HELP
+      size: medium
+      default: '/blog'
+
+    featuredposts:
+      type: toggle
+      label: TELEPHASIC.ADMIN.THEME.FEATUREDPOSTS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    featuredposts_number:
+      type: range
+      label: TELEPHASIC.ADMIN.THEME.FEATUREDPOSTS_NUMBER
+      description: TELEPHASIC.ADMIN.THEME.FEATUREDPOSTS_NUMBER_DESCRIPTION
+      default: 3
+      validate:
+        min: 1
+        max: 5
+
+    hero_content:
+        type: fieldset
+        collapsible: true
+        collapsed: false
+        icon: image
+        title: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.LABEL
+        fields:
+          hero_title:
+            type: text
+            label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.TITLE
+            minlength: 5
+            maxlength: 255
+          hero_subtitle:
+            type: textarea
+            label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.SUBTITLE
+            minlength: 10
+            maxlength: 255
+          hero_button_text:
+            type: text
+            label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.BUTTON_TEXT
+          hero_button_url:
+            type: text 
+            label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.BUTTON_URL
+
+    footer:
+        type: fieldset
+        collapsible: true
+        collapsed: false
+        icon: share-alt
+        title: TELEPHASIC.ADMIN.THEME.FOOTER.LABEL
+        fields:
+          contact_title:
+            label: TELEPHASIC.ADMIN.THEME.FOOTER.CONTACT.FORM_TITLE
+            type: text
+          contact_subtitle:
+            label: TELEPHASIC.ADMIN.THEME.FOOTER.CONTACT.FORM_SUBTITLE
+            type: text
+          copyright_author:
+            type: text
+            label: TELEPHASIC.ADMIN.THEME.FOOTER.COPYRIGHT.AUTHOR
+          copyright_rights:
+            type: text
+            label: TELEPHASIC.ADMIN.THEME.FOOTER.COPYRIGHT.RIGHTS
+
+
+    social_icons:
+        type: fieldset
+        collapsible: true
+        collapsed: false
+        icon: share-alt
+        title: TELEPHASIC.ADMIN.THEME.FOOTER.SOCIALS.ICONS
+        fields:
+          social:
+            name: social
+            type: list
+            style: vertical
+            collapsed: true
+            fields:
+              .name:
+                type: text
+                label: TELEPHASIC.ADMIN.THEME.FOOTER.SOCIALS.ICON_NAME
+              .url:
+                type: text
+                label: TELEPHASIC.ADMIN.THEME.FOOTER.SOCIALS.ICON_URL
+              .icon:
+                type: text
+                label: TELEPHASIC.ADMIN.THEME.FOOTER.SOCIALS.ICON_ICON
+                description: TELEPHASIC.ADMIN.THEME.FOOTER.SOCIALS.ICON_HELP
+

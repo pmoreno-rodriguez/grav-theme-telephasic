@@ -1,0 +1,32 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
+{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+{% set taxonomy_color = header_var('content.taxonomy_color', [page, blog]) %}
+
+{% block content %}
+    <div class="wrapper" >
+        <div class="container" id="main">
+
+            {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
+
+            <div class="row features">
+            
+            {% embed 'partials/layout.html.twig' %}
+
+                {% block item %}
+                    {% include 'partials/blog-item.html.twig' %}
+                {% endblock %}
+                {% block sidebar %}
+                    {% include 'partials/sidebar.html.twig' with {'taxonomy_color':taxonomy_color} %}
+                {% endblock %}
+            {% endembed %}
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

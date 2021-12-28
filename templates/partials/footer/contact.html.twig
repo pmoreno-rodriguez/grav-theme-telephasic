@@ -1,0 +1,12 @@
+{% block contact %}
+
+
+<section class="col-6 col-12-narrower">
+    <form method="post" action="#">
+        <div class="row gtr-50">
+            {% include 'forms/form.html.twig' with { form: forms('contact-form') } %}
+        </div>
+    </form>
+</section>
+
+{% endblock %}

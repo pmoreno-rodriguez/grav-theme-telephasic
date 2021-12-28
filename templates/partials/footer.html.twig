@@ -1,0 +1,28 @@
+{% set contact_title = theme_var('contact_title')|defined('Contact Us') %}
+{% set contact_subtitle = theme_var('contact_subtitle')|defined('Send us your comments') %}
+{% set copyright_author = theme_var('copyright_author') %}
+{% set copyright_rights = theme_var('copyright_rights') %}
+
+<div id="footer-wrapper">
+    <div id="footer" class="container">
+        
+        {% block header_footer %}
+            {% include 'partials/footer/header_footer.html.twig' with {'title': contact_title , 'subtitle': contact_subtitle } %}
+        {% endblock %}
+
+        <div class="row">
+
+            {% block contact %}
+                {% include 'partials/footer/contact.html.twig' %}
+            {% endblock %}
+
+            {% block social %}
+                {% include 'partials/footer/social.html.twig' %}
+            {% endblock %}
+
+        </div>
+    </div>
+    {% block copyright %}
+        {% include 'partials/footer/copyright.html.twig' %}
+    {% endblock %}
+</div>

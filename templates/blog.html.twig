@@ -1,0 +1,47 @@
+{% extends 'partials/base.html.twig' %}
+
+{% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
+{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(false) %}
+{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+{% set show_pagination = header_var('show_pagination', [page, blog])|defined(true) %}
+{% set taxonomy_color = header_var('content.taxonomy_color', [page, blog]) %}
+{% set collection = page.collection() %}
+
+  
+  {% block content %}
+    <div class="wrapper">
+        <section class="container">
+
+        <section>{{ content|raw }}</section>
+
+          
+          {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+              {% include 'partials/breadcrumbs.html.twig' %}
+          {% endif %}
+          
+          <div class="row features">
+          
+          {% embed 'partials/layout.html.twig' %}
+
+              {% block item %}
+                
+                {% for child in collection %}
+                  {% include 'partials/blog_list.html.twig' with {blog: page, page: child} %}
+                {% endfor %}
+                {% if show_pagination and config.plugins.pagination.enabled and collection.params.pagination %}
+                    <div>
+                      {% include 'partials/pagination.html.twig' with {base_url: page.url, pagination: collection.params.pagination} %}
+                    </div>
+                {% endif %}
+            {% endblock %}
+
+            {% block sidebar %}
+                {% include 'partials/sidebar.html.twig' with {'taxonomy_color': taxonomy_color} %}
+            {% endblock %}
+
+          {% endembed %}
+          </div>
+
+        </section>
+    </div>
+  {% endblock %}

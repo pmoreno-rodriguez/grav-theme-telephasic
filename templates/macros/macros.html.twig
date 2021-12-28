@@ -1,0 +1,26 @@
+{% macro nav_loop(page) %}
+  {% import _self as macros %}
+  {% for p in page.children.visible %}
+    {% set active_page = (p.active or p.activeChild) ? 'active' : '' %}
+    <li>
+      {% if p.routable != false %}
+      <a href="{{ p.url }}" class="{{ active_page }}">
+        {{ p.menu }}
+      </a>
+      {% else %}
+        <a  class="{{ active_page }}">
+        {{ p.menu }}
+      </a>
+      {% endif %}
+      {% if p.children.visible.count > 0 %}
+      <ul>
+        {{ macros.nav_loop(p) }}
+      </ul>
+      {% endif %}
+      {% if not loop.last and loop.index is same as((loop.length + 1) // 2) %}
+          </li>
+          <span style="visibility: hidden; padding:0;" class="break"></span>
+      {% endif %}
+    </li>
+  {% endfor %}
+{% endmacro %}

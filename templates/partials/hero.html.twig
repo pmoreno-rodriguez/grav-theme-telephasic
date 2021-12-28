@@ -1,0 +1,13 @@
+<!-- Hero -->
+
+<section id="hero" class="container">
+	<header>
+		{% if theme_config.hero_title %}<h2>{{theme_config.hero_title|raw}}</h2>{% endif %}
+	</header>
+	{% if theme_config.hero_subtitle %}<p>{{theme_config.hero_subtitle|raw}}</p>{% endif %}
+	{% if theme_config.hero_button_text %}
+	<ul class="actions">
+		<li><a href="{{theme_config.hero_button_url}}" class="button">{{theme_config.hero_button_text}}</a></li>
+	</ul>
+	{% endif %}
+</section>

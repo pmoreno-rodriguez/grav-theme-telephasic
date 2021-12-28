@@ -1,0 +1,18 @@
+{% set featuredposts_number = theme_var('featuredposts_number') %}
+
+<h3>{{ 'TELEPHASIC.FEATURED'|t }}</h3>
+{% for page in page.evaluate({'@taxonomy.category':'featured'}).order('date', 'desc').slice(0,featuredposts_number) %}
+        <div class="image-wrapper">
+            {% if page.header.primaryImage %}
+                <a class="image featured" href="{{page.url}}" alt="{{page.title}}" rel="nofollow">{{ page.media[page.header.primaryImage].cropZoom(600,300).loading('lazy').html('',page.title)|raw}}</a>
+            {% endif %}
+        </div>
+        <a href="{{ page.url }}"><h3 class="featured" itemprop="headline">{{ page.title|raw }}</h3></a>
+        <p>{{page.header.subtitle|raw}}</p>
+       
+        {% if page.summary != page.content %}
+            {{ page.summary|truncate(100)|raw }}
+        {% else %}
+            {{ page.content|raw }}
+        {% endif %}
+{% endfor %}

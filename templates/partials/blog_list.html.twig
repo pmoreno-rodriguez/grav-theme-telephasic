@@ -1,0 +1,22 @@
+<article id="content">
+    <header>
+        <div class="image-wrapper{#  {% if page.isFirst %}first{% endif %} #}">
+            {% if page.header.primaryImage %}
+                <a class="image featured" href="{{page.url}}" rel="nofollow"><img src="{{ page.media[page.header.primaryImage].url|e}}" loading="lazy" alt="{{page.title}}"></a>
+            {% endif %}
+        </div>
+        <a href="{{ page.url }}"><h3 itemprop="headline">{{ page.title|raw}}</h3></a>
+        <span>{{page.header.subtitle|raw}}</span>
+    </header>
+
+    {% if page.summary != page.content %}
+        <span>{{ page.summary|raw }}</span>
+    {% else %}
+        <span>{{ page.content|raw }}</span>
+    {% endif %}
+
+    <ul class="actions">
+        <li><a href="{{page.url}}" class="button" rel="nofollow">{{'TELEPHASIC.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+    </ul>
+</article>
+

@@ -1,0 +1,19 @@
+{% extends 'partials/simplesearch_base.html.twig' %}
+
+{% block content %}
+
+<div class="wrapper">
+<div class="container" id="main">
+    <section>
+      <h2>{{'TELEPHASIC.BLOG.SEARCH.SEARCH_RESULTS'|t}}</h2>
+      {% include 'partials/simplesearch_searchbox.html.twig' %}
+    </section>
+    <section>
+      {% for page in search_results %}
+        {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
+      {% endfor %}
+    </section>
+</div>
+</div>
+ 
+{% endblock %}

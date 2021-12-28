@@ -1,0 +1,12 @@
+{% block content %}
+<!-- Promo -->
+<div id="wrapper">
+	{{ page.content|raw }}
+	<div id="promo-wrapper">
+		<section id="promo">
+			<h2>{{page.header.title|raw}}</h2>
+			<a href="{{page.header.button_url}}" class="button">{{page.header.button_text}}</a>
+		</section>
+	</div>
+</div>
+{% endblock %}

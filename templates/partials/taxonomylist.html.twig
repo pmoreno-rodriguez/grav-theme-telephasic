@@ -1,0 +1,13 @@
+{% set taxlist = children_only is defined ? taxonomylist.getChildPagesTags() : taxonomylist.get() %}
+
+
+{% if taxlist %}
+<div>
+<h3>{{'TELEPHASIC.SIDEBAR.TAGS'|t}}</h3>
+<ul class="tags">
+    {% for tax,value in taxlist[taxonomy] %}
+        <a class="label label-rounded label-{{taxonomy_color}}" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+    {% endfor %}
+</span>
+</ul>
+{% endif %}
