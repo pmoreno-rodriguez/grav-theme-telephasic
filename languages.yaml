@@ -35,9 +35,8 @@ en:
           SOCIALS:
             ICONS: Social Icons
             ICON_NAME: Social Name
-            ICON_URL: URL Link to Social
-            ICON_ICON: Icon to Social
-            ICON_HELP: Write only the icon name according to `<a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" target="_blank">FontAwesome</a>` (without fa preffix)
+            ICON_URL: Social Link
+            ICON_ICON: Social Icon
           COPYRIGHT:
             AUTHOR: Website author
             RIGHTS: Text for author rights
@@ -100,7 +99,6 @@ en:
               DIR_DESC: Descending
             PAGINATION: Pagination
             URL_TAXONOMY_FILTERS: URL Taxonomy Filters
-            TAXONOMY_COLOR: CSS classes for taxonomy
       ITEM:
         TAB: Blog Item
         CONTENT:
@@ -188,10 +186,9 @@ es:
             BUTTON_URL: URL del botón
           SOCIALS:
             ICONS: Iconos Redes Sociales
-            ICON_NAME: Nombre de Red Social
+            ICON_NAME: Nombre de la Red Social
             ICON_URL: Enlace de la Red Social
-            ICON_ICON: Icono de Red Social
-            ICON_HELP: Escriba sólo el nombre del icono según se indica en `<a href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free" target="_blank">FontAwesome</a>` (sin el prefijo fa)
+            ICON_ICON: Icono de la Red Social
           COPYRIGHT:
             AUTHOR: Author del sitio
             RIGHTS: Texto para los derechos de autor
@@ -253,7 +250,6 @@ es:
               DIR_DESC: Descendente
             PAGINATION: Paginación
             URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
-            TAXONOMY_COLOR: Clases CSS para la taxonomía
       ITEM:
         TAB: Artículo de Blog
         CONTENT:
