@@ -5,7 +5,7 @@
         <ul class = "divided icons col-6 col-12-mobile">
         {% for item in theme_config.social%}
             <li class="icon brands fa-{{item.icon}}">
-                <a href="{{ item.url }}"> <span class="extra">{{item.name}}</a> 
+                <a href="{{ item.url }}"> <span>{{item.name}}</span></a> 
             </li>
             {% if not loop.last and loop.index is same as((loop.length + 1) // 2) %}
                 </ul>
