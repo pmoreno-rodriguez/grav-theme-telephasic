@@ -5,10 +5,10 @@ icon: group
 author:
   name: Pedro Moreno
   email: pmoreno.rodriguez@outlook.com
-  url: 
-homepage: 
+  url: https://github.com/pmoreno-rodriguez/grav-theme-telephasic
+homepage: https://github.com/pmoreno-rodriguez/grav-theme-telephasic
 keywords: telephasic, minimalist, theme, modern, fast, responsive, html5, css3, blog
-bugs: 
+bugs: https://github.com/pmoreno-rodriguez/grav-theme-telephasic/issues
 license: CC-BY-3.0
 
 dependencies:
