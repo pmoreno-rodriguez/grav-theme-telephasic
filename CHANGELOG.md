@@ -3,7 +3,7 @@
 
 Initial Commit
 
-1.  [](#new)
+1. [](#new)
     * HTML5 and CSS3
     * Fully Responsive
     * Various templates for presenting your content
