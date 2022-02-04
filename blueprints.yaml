@@ -10,6 +10,7 @@ homepage: https://github.com/pmoreno-rodriguez/grav-theme-telephasic
 keywords: telephasic, minimalist, theme, modern, fast, responsive, html5, css3, blog
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-telephasic/issues
 license: CC-BY-3.0
+demo: http://telephasic.juanvillen.es
 
 dependencies:
   - { name: grav, version: '>=1.6.0' }
