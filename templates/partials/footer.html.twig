@@ -2,6 +2,7 @@
 {% set contact_subtitle = theme_var('contact_subtitle')|defined('Send us your comments') %}
 {% set copyright_author = theme_var('copyright_author') %}
 {% set copyright_rights = theme_var('copyright_rights') %}
+{% set enable_social = theme_var('social_enabled') %}
 
 <div id="footer-wrapper">
     <div id="footer" class="container">
@@ -16,9 +17,13 @@
                 {% include 'partials/footer/contact.html.twig' %}
             {% endblock %}
 
+            {% if enable_social == 1 %}
+
             {% block social %}
                 {% include 'partials/footer/social.html.twig' %}
             {% endblock %}
+            
+            {% endif %}
 
         </div>
     </div>
