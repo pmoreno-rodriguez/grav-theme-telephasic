@@ -1,10 +1,9 @@
 # v1.0.0
 ## 12/28/2021
 
-1. [](#new)
+Initial Commit
 
-    Initial Commit
-
+1.  [](#new)
     * HTML5 and CSS3
     * Fully Responsive
     * Various templates for presenting your content
