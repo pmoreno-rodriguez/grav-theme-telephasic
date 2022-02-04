@@ -38,7 +38,7 @@ social:
     icon: pinterest
 contact_title: null
 contact_subtitle: null
-copyright_author: 'Design: <a href="http://telephasic.juanvillen.es">Pedro Moreno</a>'
+copyright_author: 'Design: <a href="mailto:webmaster@juanvillen.es">Pedro Moreno</a>'
 copyright_rights: '&copy; Pedro Moreno. All rights reserved.'
 favicon:
   user/themes/telephasic/images/ico/favicon.png:
