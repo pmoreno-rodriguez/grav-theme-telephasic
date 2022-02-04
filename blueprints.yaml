@@ -151,6 +151,15 @@ form:
         icon: share-alt
         title: TELEPHASIC.ADMIN.THEME.FOOTER.SOCIALS.ICONS
         fields:
+          social_enabled:
+            type: toggle
+            label: TELEPHASIC.ADMIN.THEME.FOOTER.SOCIALS.ENABLED
+            highlight: 1
+            options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+            validate:
+                type: bool
           social:
             name: social
             type: list
