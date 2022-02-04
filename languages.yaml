@@ -33,6 +33,7 @@ en:
             SUBTITLE: Send Us your comments
             BUTTON_URL: Button URL
           SOCIALS:
+            ENABLED: Enable Social Icons
             ICONS: Social Icons
             ICON_NAME: Social Name
             ICON_URL: Social Link
@@ -185,6 +186,7 @@ es:
             SUBTITLE: Envíenos sus comentarios
             BUTTON_URL: URL del botón
           SOCIALS:
+            ENABLED: Activar Iconos Sociales
             ICONS: Iconos Redes Sociales
             ICON_NAME: Nombre de la Red Social
             ICON_URL: Enlace de la Red Social
