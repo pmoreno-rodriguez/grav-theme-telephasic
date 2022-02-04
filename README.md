@@ -81,6 +81,10 @@ Once this is done, you should be able to see the new theme on the frontend. Keep
 # Contact Form Configuration
 For contact form configuration instructions please refer to [official documentation](http://learn.getgrav.org/forms/forms/example-form). Make sure you installed Email and Form plugin though.
 
+# Demo page
+
+[http://telephasic.juanvillen.es/](http://telephasic.juanvillen.es/)
+
 # To Do
 
 * Add Webp option in twig templates with images.
