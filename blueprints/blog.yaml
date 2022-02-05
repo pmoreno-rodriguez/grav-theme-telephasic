@@ -85,7 +85,7 @@ form:
 
             header.content.url_taxonomy_filters:
               type: toggle
-              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.URL_TAXONOMY_FILTERS
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.TAXONOMY_FILTERS
               highlight: 1
               default: 1
               options:
@@ -96,7 +96,7 @@ form:
             header.content.taxonomy_color:
               type: select
               size: small
-              label: 'TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.URL_TAXONOMY_COLOR'
+              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.TAXONOMY_COLOR
               default: blue
               options:
                 lightblue: 'LightBlue'
