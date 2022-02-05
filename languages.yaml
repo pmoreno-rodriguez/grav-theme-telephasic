@@ -99,7 +99,8 @@ en:
               DIR_ASC: Ascending
               DIR_DESC: Descending
             PAGINATION: Pagination
-            URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+            TAXONOMY_FILTERS: URL Taxonomy Filters
+            TAXONOMY_COLOR: Taxonomy badges color
       ITEM:
         TAB: Blog Item
         CONTENT:
@@ -251,7 +252,8 @@ es:
               DIR_ASC: Ascendente
               DIR_DESC: Descendente
             PAGINATION: Paginación
-            URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
+            TAXONOMY_FILTERS: Filtros de taxonomía por URL
+            TAXONOMY_COLOR: Color de las etiquetas de taxonomía
       ITEM:
         TAB: Artículo de Blog
         CONTENT:
@@ -303,4 +305,3 @@ es:
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
-
