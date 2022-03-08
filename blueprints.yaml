@@ -1,7 +1,7 @@
 name: Telephasic
 slug: telephasic
 type: theme
-version: 1.0.1
+version: 1.0.2
 description: "Telephasic Grav Theme (ported from HTML5Up)"
 icon: group
 author:
@@ -15,7 +15,7 @@ license: CC-BY-3.0
 demo: http://telephasic.juanvillen.es
 
 dependencies:
-  - { name: grav, version: '>=1.6.0' }
+  - { name: grav, version: '>=1.7.0' }
   - archives
   - pagination
   - simplesearch
@@ -30,8 +30,8 @@ form:
         highlight: 1
         default: 0
         options:
-          1: Enabled
-          0: Disabled
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
         validate:
           type: bool
     production-mode:
@@ -92,6 +92,13 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    featuredposts_category:
+      type: text
+      markdown: true
+      label: TELEPHASIC.ADMIN.THEME.FEATUREDPOSTS_CATEGORY
+      description: TELEPHASIC.ADMIN.THEME.FEATUREDPOSTS_CATEGORY_DESCRIPTION
+      size: medium
+      default: 'featured'
 
     featuredposts_number:
       type: range

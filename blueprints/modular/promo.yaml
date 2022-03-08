@@ -20,5 +20,15 @@ form:
               style: vertical
             header.button_url:
               type: text
-              label: TELEPHASIC.ADMIN.MODULAR.PROMO.BUTTON_URL
               style: vertical
+              label: TELEPHASIC.ADMIN.MODULAR.PROMO.BUTTON_URL
+            header.button_target:
+              type: toggle
+              label: TELEPHASIC.ADMIN.MODULAR.PROMO.BUTTON_TARGET
+              highlight: 1
+              default: 1
+              options:
+                  1: PLUGIN_ADMIN.YES
+                  0: PLUGIN_ADMIN.NO
+              validate:
+                  type: bool

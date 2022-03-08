@@ -24,6 +24,8 @@ en:
         FEATUREDPOSTS: Enable Featured posts in Sidebar
         FEATUREDPOSTS_NUMBER: Featured posts number to show
         FEATUREDPOSTS_NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
+        FEATUREDPOSTS_CATEGORY: Featured category
+        FEATUREDPOSTS_CATEGORY_DESCRIPTION: Set name to featured category.<br />`You must include this name in Options->Taxonomy->Category`
         FOOTER: 
           LABEL: Footer
           CONTACT:
@@ -69,6 +71,7 @@ en:
           OPTIONS: Options
           BUTTON_TEXT: Button Text
           BUTTON_URL: Button URL
+          BUTTON_TARGET: Open link in new window or tab
         RECENT_POSTS:
           TAB: Recent Posts
           LAYOUT:
@@ -78,7 +81,7 @@ en:
           LIMIT: Limit 
       BLOG:
         TAB: Blog Config
-        BLOG_PAGE: Blog Page
+        BLOG_ROUTE: Blog Route
         BLOG_HELP: The route to the main blog page that contains the "Show ..." configuration
         CONTENT:
           TITLE: Content Definition
@@ -86,6 +89,8 @@ en:
           SHOW_BREADCRUMBS: Show Breadcrumbs
           SHOW_SIDEBAR: Show Sidebar
           SHOW_PAGINATION: Show Pagination
+          READMORE_TEXT: Readmore button text
+          READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
           ITEMS: 
             ITEMS: Items
             LIMIT: Max Item Count
@@ -99,7 +104,11 @@ en:
               DIR_ASC: Ascending
               DIR_DESC: Descending
             PAGINATION: Pagination
-            URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+        TAXONOMY:
+          TITLE: Taxonomy Options
+          TAXONOMY_SEE_OTHER_POSTS: See other posts of
+          TAXONOMY_FONT_COLOR:  Font color for taxonomy
+          TAXONOMY_BACKGROUND_COLOR: Background color for taxonomy
       ITEM:
         TAB: Blog Item
         CONTENT:
@@ -151,7 +160,6 @@ en:
     FEATURED: Featured
     PRIVACY: By using this form you agree to our
     FORM_SUMMARY: Here is the summary of what you wrote to us
-
 es:
   TELEPHASIC:
     ADMIN:
@@ -177,6 +185,8 @@ es:
         FEATUREDPOSTS: Activar artículos destacados en la barra lateral
         FEATUREDPOSTS_NUMBER: Número de artículos destacados a mostrar
         FEATUREDPOSTS_NUMBER_DESCRIPTION: Número de artículos destacados que se mostrarán en la barra lateral
+        FEATUREDPOSTS_CATEGORY: Categoría para destacados
+        FEATUREDPOSTS_CATEGORY_DESCRIPTION: Establezca un nombre para la categoría de artículos destacados.<br />`Deberá incluir este nombre en Opciones->Taxonomía->Categoría`
         FOOTER: 
           LABEL: Pie de página
           CONTACT:
@@ -218,9 +228,10 @@ es:
           BUTTON_URL_TARGET: Open URL in a new window
         PROMO:
           TAB: Promo
-          OPTIONS: Options
+          OPTIONS: Opciones
           BUTTON_TEXT: Texto del botón
           BUTTON_URL: URL del botón
+          BUTTON_TARGET: Abrir enlace en nueva ventana o pestaña
         RECENT_POSTS:
           TAB: Entradas Recientes
           LAYOUT:
@@ -230,14 +241,16 @@ es:
           LIMIT: Limite 
       BLOG:
         TAB: Configuración del Blog
-        BLOG_PAGE: Página de Blog
-        BLOG_HELP: La ruta de la página principal del Blog que contiene "Mostrar ..." en la configuración
+        BLOG_ROUTE: Ruta del Blog
+        BLOG_HELP: La ruta de la página principal del Blog a la que hace referencia "Mostrar ..." en la configuración
         CONTENT:
           TITLE: Definición de Contenido
           CONFIGURATION: Configuración
           SHOW_BREADCRUMBS: Mostrar Migas de pan
           SHOW_SIDEBAR: Mostrar Barra Lateral
           SHOW_PAGINATION: Mostrar Paginación
+          READMORE_TEXT: Texto del botón Leer más
+          READMORE_TEXT_DESCRIPTION: Especifique un texto personalizado para el botón leer más
           ITEMS: 
             ITEMS: Artículos
             LIMIT: Límite máximo de artículos
@@ -251,7 +264,11 @@ es:
               DIR_ASC: Ascendente
               DIR_DESC: Descendente
             PAGINATION: Paginación
-            URL_TAXONOMY_FILTERS: Filtros de taxonomía por URL
+        TAXONOMY:
+          TITLE: Opciones de Taxonomía
+          TAXONOMY_SEE_OTHER_POSTS: Ver otras entradas de
+          TAXONOMY_FONT_COLOR: Color de fuente para la taxonomía
+          TAXONOMY_BACKGROUND_COLOR: Color de fondo para la taxonomía
       ITEM:
         TAB: Artículo de Blog
         CONTENT:
@@ -303,4 +320,3 @@ es:
     FEATURED: Destacados
     PRIVACY: Al usar este formulario estás de acuerdo con nuestra
     FORM_SUMMARY: Aquí está el resumen de lo que nos escribió.
-

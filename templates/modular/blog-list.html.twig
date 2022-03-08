@@ -22,9 +22,12 @@
 						</div>
 					{% endif %}
 					{% if p.title %}
-						<header>
-							<h2>{{p.title|raw}}</h2>
+						<header class="blog-list">
+							<h3>{{p.title|raw}}</h3>
 						</header>
+					{% endif %}
+					{% if p.header.subtitle %}
+						<h4 class="sidebar_subtitle">{{ p.header.subtitle }}</h4>
 					{% endif %}
 					{% if p.summary != p.content %}
 				        <p>{{ p.summary|raw }}</p>
@@ -33,7 +36,7 @@
 				    {% endif %}
 					
 					<ul class="actions">
-						<li><a href="{{p.url}}" class="button" rel="nofollow">Read More</a></li>
+						<li><a href="{{p.url}}" class="button" rel="nofollow">{{blog.header.readmore_text|raw|default('Read more')}}</a></li>
 					</ul>
 					
 				</section>

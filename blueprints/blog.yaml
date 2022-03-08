@@ -83,26 +83,18 @@ form:
               validate:
                 type: bool
 
-            header.content.url_taxonomy_filters:
-              type: toggle
-              label: TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.URL_TAXONOMY_FILTERS
-              highlight: 1
-              default: 1
-              options:
-                1: PLUGIN_ADMIN.ENABLED
-                0: PLUGIN_ADMIN.DISABLED
-              validate:
-                type: bool
-            header.content.taxonomy_color:
-              type: select
-              size: small
-              label: 'TELEPHASIC.ADMIN.BLOG.CONTENT.ITEMS.URL_TAXONOMY_COLOR'
-              default: blue
-              options:
-                lightblue: 'LightBlue'
-                lightyellow: 'LightYellow'
-                lightsalmon: 'LightSalmon'
-                lightgray: 'LightGray'
+            taxonomy_title:
+              type: spacer
+              title: TELEPHASIC.ADMIN.BLOG.TAXONOMY.TITLE
+
+            header.taxonomy_background_color:
+              type: colorpicker
+              label: 'TELEPHASIC.ADMIN.BLOG.TAXONOMY.TAXONOMY_BACKGROUND_COLOR'
+
+            header.taxonomy_font_color:
+              type: colorpicker
+              label: 'TELEPHASIC.ADMIN.BLOG.TAXONOMY.TAXONOMY_FONT_COLOR'
+
           import@:
             type: partials/blog-bits
             context: blueprints://pages

@@ -1,5 +1,3 @@
-
-
 {% if page.header.author %}
     {% set author =  page.header.author %}
 {% else %}
@@ -36,7 +34,7 @@
     <span>
         <i class="fas fa-link fa-md"></i>
         {% for category in page.taxonomy.category %}
-            <a class="tags" title="{{ 'See other posts of ' ~ (category|capitalize) }}"
+            <a class="tags" title="{{ 'TELEPHASIC.ADMIN.BLOG.TAXONOMY.TAXONOMY_SEE_OTHER_POSTS'|t ~ ' '  ~ (category|capitalize) }}"
              href="{{ blog.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
         {% endfor %}
     </span>
