@@ -45,8 +45,8 @@ form:
               label: TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT
               classes: fancy
               options:
-                'short': TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT.SHORT
-                'long': TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT.LONG
+                'short': TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT_SHORT
+                'long': TELEPHASIC.ADMIN.ITEM.CONTENT.OPTIONS.SUMMARY.FORMAT_LONG
 
             header.summary.size:
               type: text

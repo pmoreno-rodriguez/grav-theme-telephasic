@@ -23,12 +23,11 @@
     * Improved footer section with possibility to show contact form in halves or full width.
 
 # v1.0.0
-## 12/20/2021
+## 12/28/2021
+
+Initial Commit
 
 1. [](#new)
-
-    Initial Commit
-
     * HTML5 and CSS3
     * Fully Responsive
     * Various templates for presenting your content
