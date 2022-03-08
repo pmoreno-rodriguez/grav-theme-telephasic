@@ -34,5 +34,19 @@ ul.archives li a {border: none;}
 .author a {
     border-bottom: none !important;
 }
+.modular-content {
 
+    padding-bottom: 0em !important;
+}
+
+.sidebar_subtitle {
+    color: #f35858;
+    font-weight: 500;
+    border-bottom: 1px dotted rgb(243 88 88 / 50%)
+}
+
+header.blog-list {
+    margin-bottom: 0.5em;
+
+}
 
