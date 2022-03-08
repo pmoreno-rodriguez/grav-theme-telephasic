@@ -1,3 +1,7 @@
+{% extends 'partials/base.html.twig' %}
+    
+{% set modules = page.collection() %}
+
 {% block content %}
     
     <div class="wrapper modular-content">
@@ -24,3 +28,4 @@
 
 
 {% endblock %}
+
