@@ -8,7 +8,7 @@ form:
     header.blog_url:
       type: text
       toggleable: true
-      label: TELEPHASIC.ADMIN.BLOG.BLOG_PAGE
+      label: TELEPHASIC.ADMIN.BLOG.BLOG_ROUTE
       help: TELEPHASIC.ADMIN.BLOG.BLOG_HELP
       default: '/blog'
       placeholder: '/blog'
@@ -46,3 +46,10 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    header.readmore_text:
+      type: text
+      toggleable: true
+      default: 'Read more'
+      size: large
+      label: TELEPHASIC.ADMIN.BLOG.CONTENT.READMORE_TEXT
+      description: TELEPHASIC.ADMIN.BLOG.CONTENT.READMORE_TEXT_DESCRIPTION
