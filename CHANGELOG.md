@@ -1,9 +1,18 @@
 # v1.0.2
-## MM/DD/2022
+## 03/08/2022
 
-1. [](#new)
-    * 
-    * 
+1. [](#bugfix)
+    * Fixed some translations
+2. [](#new)
+    * Added primary image and subtitle in modular pages
+    * Added primary image, subtitle and page content to **promo** modular template
+    * Added link target option to promo template
+    * Added `featuredposts_category` to **blueprints.yaml** for choose the featured posts name
+    * Added background and foreground color for taxonomy badges
+    * Added `readmore_text` blueprint to choose the button text for posts in blog list templates
+3. [](#improved)
+    * Deleted unused `url_taxonomy_filters` blueprint from **blog.yaml**
+
 # v1.0.1
 ## 02/04/2022
 
