@@ -1,13 +1,26 @@
-{% extends 'partials/base.html.twig' %}
-    
-{% set modules = page.collection() %}
-
 {% block content %}
-           
-    {{ page.content|raw }}
+    
+    <div class="wrapper modular-content">
+
+    <div class="container">
+        {% if page.header.subtitle %}
+            <header>
+                <h2>{{page.header.subtitle|raw}}</h2>
+            </header>
+        {% endif %}
+
+        {% if page.header.primaryImage %}
+              <img src="{{ page.media[page.header.primaryImage].url|e}}" class="image featured" loading="lazy" alt="{{page.title}}" /></a>
+        {% endif %}
+        
+        {{ page.content|raw }}
+    </div>
+
+    </div>
 
     {% for module in modules %}
         {{ module.content|raw }}
     {% endfor %}
+
 
 {% endblock %}
