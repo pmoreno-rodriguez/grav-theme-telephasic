@@ -4,23 +4,25 @@
 
 {% block content %}
     
-    <div class="wrapper modular-content">
+    {% if page.content is not empty or page.header.subtitle is not empty %}
+        <div class="wrapper modular-content">
 
-    <div class="container">
-        {% if page.header.subtitle %}
-            <header>
-                <h2>{{page.header.subtitle|raw}}</h2>
-            </header>
-        {% endif %}
+        <div class="container">
+            {% if page.header.subtitle %}
+                <header>
+                    <h2>{{page.header.subtitle|raw}}</h2>
+                </header>
+            {% endif %}
 
-        {% if page.header.primaryImage %}
-              <img src="{{ page.media[page.header.primaryImage].url|e}}" class="image featured" loading="lazy" alt="{{page.title}}" /></a>
-        {% endif %}
-        
-        {{ page.content|raw }}
-    </div>
+            {% if page.header.primaryImage %}
+                  <img src="{{ page.media[page.header.primaryImage].url|e}}" class="image featured" loading="lazy" alt="{{page.title}}" /></a>
+            {% endif %}
+            
+            {{ page.content|raw }}
+        </div>
 
-    </div>
+        </div>
+    {% endif %}
 
     {% for module in modules %}
         {{ module.content|raw }}
