@@ -16,7 +16,7 @@
     {% endif %}
 
     <ul class="actions">
-        <li><a href="{{page.url}}" class="button" rel="nofollow">{{'TELEPHASIC.BLOG.ITEM.CONTINUE_READING'|t}}</a></li>
+        <li><a href="{{page.url}}" class="button" rel="nofollow">{{blog.header.readmore_text|raw|default('Read more')}}</a></li>
     </ul>
 </article>
 
