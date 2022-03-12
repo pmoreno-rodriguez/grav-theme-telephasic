@@ -3,7 +3,7 @@
 
 1. [](#improved)
     * Added option to disable contact form at homepage
-    * Rebuild footer section
+    * Rebuilt footer section
     * Added some translations at languages.yaml
 
 # v1.0.2
