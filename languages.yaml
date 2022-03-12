@@ -29,13 +29,14 @@ en:
         FOOTER: 
           LABEL: Footer
           CONTACT:
+            ENABLED_HOMEPAGE: '<b>Contact Form enabled at homepage</b>'
             FORM_TITLE: Contact Form Title
             FORM_SUBTITLE: Contact Form Subtitle
             TITLE: Contact Us
             SUBTITLE: Send Us your comments
             BUTTON_URL: Button URL
           SOCIALS:
-            ENABLED: Enable Social Icons
+            ENABLED: '<b>Enable Social Icons</b>'
             ICONS: Social Icons
             ICON_NAME: Social Name
             ICON_URL: Social Link
@@ -106,6 +107,7 @@ en:
             PAGINATION: Pagination
         TAXONOMY:
           TITLE: Taxonomy Options
+          URL_TAXONOMY_FILTERS: URL Taxonomy Filters
           TAXONOMY_SEE_OTHER_POSTS: See other posts of
           TAXONOMY_FONT_COLOR:  Font color for taxonomy
           TAXONOMY_BACKGROUND_COLOR: Background color for taxonomy
@@ -190,13 +192,14 @@ es:
         FOOTER: 
           LABEL: Pie de página
           CONTACT:
+            ENABLED_HOMEPAGE: '<b>Formulario de contacto habilitado en la página de inicio</b>'
             FORM_TITLE: Título para el formulario de contacto
             FORM_SUBTITLE: Subtítulo para el formulario de contacto
             TITLE: Contacta con nosotros
             SUBTITLE: Envíenos sus comentarios
             BUTTON_URL: URL del botón
           SOCIALS:
-            ENABLED: Activar Iconos Sociales
+            ENABLED: '<b>Activar Iconos Sociales</b>'
             ICONS: Iconos Redes Sociales
             ICON_NAME: Nombre de la Red Social
             ICON_URL: Enlace de la Red Social
@@ -266,6 +269,7 @@ es:
             PAGINATION: Paginación
         TAXONOMY:
           TITLE: Opciones de Taxonomía
+          URL_TAXONOMY_FILTERS: Filtros de taxonomía de URL
           TAXONOMY_SEE_OTHER_POSTS: Ver otras entradas de
           TAXONOMY_FONT_COLOR: Color de fuente para la taxonomía
           TAXONOMY_BACKGROUND_COLOR: Color de fondo para la taxonomía
