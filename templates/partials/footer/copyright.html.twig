@@ -1,6 +1,6 @@
 {% block copyright %}
 
-<div id="copyright" class="container">
+<div id="copyright" class="container" {% if contact_enabled == false and social_enabled == false %}style="margin-top: 0; padding-top: 0; border-top: 0;" {% else %}{% endif %}>
     <ul class="menu">
         <li>{{copyright_rights|raw}}</li><li>{{copyright_author|raw}}</li>
     </ul>
