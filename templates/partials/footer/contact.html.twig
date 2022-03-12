@@ -1,6 +1,6 @@
 {% block contact %}
 
-<section class="{% if enable_social == 1 %}col-6 {% else %}col-12{% endif %} col-12-narrower">
+<section class="{% if social_enabled == true %}col-6 {% else %}col-12{% endif %} col-12-narrower">
     <form method="post" action="#">
         <div class="row gtr-50">
             {% include 'forms/form.html.twig' with { form: forms('contact-form') } %}
