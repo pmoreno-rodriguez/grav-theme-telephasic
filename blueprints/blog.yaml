@@ -87,13 +87,24 @@ form:
               type: spacer
               title: TELEPHASIC.ADMIN.BLOG.TAXONOMY.TITLE
 
+            header.content.url_taxonomy_filters:
+              type: toggle
+              label: TELEPHASIC.ADMIN.BLOG.TAXONOMY.URL_TAXONOMY_FILTERS
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
             header.taxonomy_background_color:
               type: colorpicker
-              label: 'TELEPHASIC.ADMIN.BLOG.TAXONOMY.TAXONOMY_BACKGROUND_COLOR'
+              label: TELEPHASIC.ADMIN.BLOG.TAXONOMY.TAXONOMY_BACKGROUND_COLOR
 
             header.taxonomy_font_color:
               type: colorpicker
-              label: 'TELEPHASIC.ADMIN.BLOG.TAXONOMY.TAXONOMY_FONT_COLOR'
+              label: TELEPHASIC.ADMIN.BLOG.TAXONOMY.TAXONOMY_FONT_COLOR
 
           import@:
             type: partials/blog-bits
