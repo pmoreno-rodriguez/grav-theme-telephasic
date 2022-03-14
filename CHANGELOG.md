@@ -1,3 +1,11 @@
+# v1.0.3
+## 03/12/2022
+
+1. [](#improved)
+    * Added option to disable contact form at homepage
+    * Rebuilt footer section
+    * Added some translations at languages.yaml
+
 # v1.0.2
 ## 03/08/2022
 

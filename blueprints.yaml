@@ -1,7 +1,7 @@
 name: Telephasic
 slug: telephasic
 type: theme
-version: 1.0.2
+version: 1.0.3
 description: "Telephasic Grav Theme (ported from HTML5Up)"
 icon: group
 author:
@@ -140,6 +140,16 @@ form:
         icon: share-alt
         title: TELEPHASIC.ADMIN.THEME.FOOTER.LABEL
         fields:
+          contact_enabled:
+            label: TELEPHASIC.ADMIN.THEME.FOOTER.CONTACT.ENABLED_HOMEPAGE
+            type: toggle
+            highlight: 1
+            default: 1
+            options:
+              1: PLUGIN_ADMIN.ENABLED
+              0: PLUGIN_ADMIN.DISABLED
+            validate:
+              type: bool
           contact_title:
             label: TELEPHASIC.ADMIN.THEME.FOOTER.CONTACT.FORM_TITLE
             type: text

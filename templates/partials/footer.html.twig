@@ -1,32 +1,38 @@
+{% set contact_enabled = theme_var('contact_enabled') %}
 {% set contact_title = theme_var('contact_title')|defined('Contact Us') %}
 {% set contact_subtitle = theme_var('contact_subtitle')|defined('Send us your comments') %}
 {% set copyright_author = theme_var('copyright_author') %}
 {% set copyright_rights = theme_var('copyright_rights') %}
-{% set enable_social = theme_var('social_enabled') %}
+{% set social_enabled = theme_var('social_enabled') %}
 
 <div id="footer-wrapper">
+    {% if contact_enabled == true or social_enabled == true %}
     <div id="footer" class="container">
+         
+            {% block header_footer %}
+                {% include 'partials/footer/header_footer.html.twig' with {'title': contact_title , 'subtitle': contact_subtitle } %}
+            {% endblock %}
+  
+            <div class="row">
+
+                    {% if contact_enabled == true %}
+                        {% block contact %}
+                            {% include 'partials/footer/contact.html.twig' %}
+                        {% endblock %}
+                    {% endif %}   
+
+                {% if social_enabled == 1 %}
+
+                    {% block social %}
+                        {% include 'partials/footer/social.html.twig' %}
+                    {% endblock %}
+                
+                {% endif %}
+
+            </div>
         
-        {% block header_footer %}
-            {% include 'partials/footer/header_footer.html.twig' with {'title': contact_title , 'subtitle': contact_subtitle } %}
-        {% endblock %}
-
-        <div class="row">
-
-            {% block contact %}
-                {% include 'partials/footer/contact.html.twig' %}
-            {% endblock %}
-
-            {% if enable_social == 1 %}
-
-            {% block social %}
-                {% include 'partials/footer/social.html.twig' %}
-            {% endblock %}
-            
-            {% endif %}
-
-        </div>
     </div>
+    {% endif %}
     {% block copyright %}
         {% include 'partials/footer/copyright.html.twig' %}
     {% endblock %}
