@@ -1,28 +1,32 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
-
 {% set show_featuredposts = theme_var('featuredposts', [page, blog])|defined(true) %}
 
 
 <section id="sidebar">
-{% if config.plugins.simplesearch.enabled %}
-    <h3>{{ 'TELEPHASIC.SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}</h3>
-    {% include 'partials/simplesearch_searchbox.html.twig' %}
-{% endif %}
+
 {% if show_featuredposts == true %}
 	{% include 'partials/sidebar_featuredposts.html.twig' %}
 {% endif %}
 
-{% if config.plugins.archives.enabled %}
-	{% include 'partials/archives.html.twig' with {'base_url':new_base_url, 'taxonomy_color': taxonomy_color} %}
+{% if config.plugins.simplesearch.enabled %}
+    <h3>{{ 'TELEPHASIC.SIDEBAR.SIMPLE_SEARCH.HEADLINE'|t }}</h3>
+    {% include 'partials/simplesearch_searchbox.html.twig' %}
 {% endif %}
+
+{% if config.plugins.archives.enabled %}
+	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
+{% endif %}
+
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
     <h3>{{'TELEPHASIC.SIDEBAR.RELATED_POSTS.HEADLINE'|t}}</h3>
     {% include 'partials/relatedpages.html.twig' %}
 {% endif %}
+
 {% if config.plugins.taxonomylist.enabled %}
-	{% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag', 'taxonomy_color': taxonomy_color} %}
+	{% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
 {% endif %}
+
 {% if config.plugins.feed.enabled %}
 <div>
     <h3>{{ 'TELEPHASIC.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h3>
@@ -31,5 +35,6 @@
     {% if config.plugins.feed.enable_json_feed %}<a class="button small" href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a>{% endif %}
 </div>
 {% endif %}
+
 </section>
 

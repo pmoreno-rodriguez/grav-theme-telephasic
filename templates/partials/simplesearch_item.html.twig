@@ -1,0 +1,23 @@
+<section class="search-row">
+    
+    {% set banner = page.media[page.header.primaryImage].loading('lazy').html(page.title,page.title)|raw %}
+
+    {% if banner %}
+        <div class="search-image">
+            <a href="{{ page.url }}">{{ banner }}</a>
+        </div>
+    {% endif %} 
+    <div class="search-item">
+        <div class="search-title">
+            <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+        </div>
+
+        <div class="search-details">
+            <span class="search-date">{{ page.date|date(config.system.pages.dateformat.short) }}</span>
+        </div>
+
+        <p>{{ page.summary|raw }}</p>
+
+        <hr/>
+    </div>
+</section>

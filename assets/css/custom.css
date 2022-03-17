@@ -3,7 +3,7 @@
     padding-left: 1rem;
     margin-bottom: 1.5rem;
     margin-top: 2em;
-    <z-index: 999;
+    z-index: 999;
 }
 #breadcrumbs span {
     display: inline-block;
@@ -42,11 +42,28 @@ ul.archives li a {border: none;}
 .sidebar_subtitle {
     color: #f35858;
     font-weight: 500;
-    border-bottom: 1px dotted rgb(243 88 88 / 50%)
 }
 
 header.blog-list {
     margin-bottom: 0.5em;
 
 }
-
+.search-row {
+    display: flex;
+    align-items: center;
+    
+}
+.search-image img {
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0 100%;
+}
+@media only all and (max-width: 47.938em) {
+    .search-image img {
+      display: none; } }
+.search-item {
+	margin-left: 30px;
+	margin-bottom: 50px;
+}
