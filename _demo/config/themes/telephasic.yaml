@@ -46,3 +46,6 @@ favicon:
     type: image/png
     size: 13203
     path: user/themes/telephasic/images/ico/favicon.png
+social_enabled: true
+featuredposts_category: featured
+contact_enabled: true
