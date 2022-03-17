@@ -5,7 +5,7 @@
     <li>
         <a href="{{ archives_url ?? base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}">
         {% if archives_show_count %}
-        <span class="label label-circle label-{{taxonomy_color}}">{{ items|length }}</span>
+        <span class="label label-circle" style="background: {{taxonomy_background_color}};color: {{taxonomy_font_color}};">{{ items|length }}</span>
         {% endif %}
         <span class="archive_date">{{ month|date(config.plugins.archives.date_display_format) }} </span>
         </a>

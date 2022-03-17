@@ -1,9 +1,21 @@
+# v1.0.4
+## 03/17/2022
+
+1. [](#bugfix)
+    * Fixed `#footer-wrapper` in `main.scss` file
+    * Fixed **archives.html.twig** to show taxonomy colors in badges
+    * Fixed display of contact form as template **contact.html.twig** when choosing not to display contact form on home page. 
+2. [](#improved)
+    * Support to svg thumbnail images in search results
+3. [](#new)
+    * Added Read more button in featured posts (sidebar)
+    
 # v1.0.3
 ## 03/12/2022
 
 1. [](#improved)
     * Added option to disable contact form at homepage
-    * Rebuilt footer section
+    * Rebuild footer section
     * Added some translations at languages.yaml
 
 # v1.0.2
