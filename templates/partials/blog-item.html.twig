@@ -1,8 +1,4 @@
-{% if page.header.author %}
-    {% set author =  page.header.author %}
-{% else %}
-    {% set author =  page.header.taxonomy.author[0] %}
-{% endif %}
+{% set author = page.header.author ?? page.taxonomy.author[0] %}
 
 <article id="content">
                 
@@ -16,11 +12,17 @@
 
 {{ page.content|raw }}
 
-{% if author %}
     <div >
-        <a href="{{ blog.url|rtrim('/') }}/author{{ config.system.param_sep }}{{ author }}" itemprop="keywords">{{ tag }}{% if page.header.avatarImage %}<img src="{{ page.media[page.header.avatarImage].url|e}}" class="avatar" alt="{{ author }}" />{% endif %}<span rel="author"> {{ author }} </span></a>
+    {% if page.header.avatarImage %}
+        <img src="{{ page.media[page.header.avatarImage].url|e}}" class="avatar" alt="{{ author }}" />
+    {% endif %}
+    {% if page.taxonomy.author %}
+        <a href="{{ blog.url|rtrim('/') }}/author{{ config.system.param_sep }}{{ author }}" itemprop="keywords">{{ author }}
+    {% else %}
+        <span rel="author"> {{ author }} </span>
+    {% endif %}   
+    {% if page.taxonomy.author %}</a>{% endif %}
     </div>
-{% endif %}
 
 {% if config.plugins.taxonomylist.enabled and page.taxonomy.tag is not empty %}
     <span>
@@ -30,7 +32,7 @@
         {% endfor %}
     </span>
 {% endif %}
-{% if page.taxonomy.category %}
+{% if page.taxonomy.category and page.taxonomy.category is not empty %}
     <span>
         <i class="fas fa-link fa-md"></i>
         {% for category in page.taxonomy.category %}
