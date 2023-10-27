@@ -1,7 +1,7 @@
 name: Telephasic
 slug: telephasic
 type: theme
-version: 1.0.4
+version: 1.0.5
 description: "Telephasic Grav Theme (ported from HTML5Up)"
 icon: group
 author:
@@ -68,7 +68,7 @@ form:
       markdown: true
       description: TELEPHASIC.ADMIN.THEME.CUSTOM_LOGO_DESCRIPTION
       accept:
-        - image/png
+        - image/*
 
     blog_section:
       type: section
