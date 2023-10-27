@@ -1,3 +1,19 @@
+# v1.0.5
+## 10/27/2023
+
+1. [](#bugfix)
+    * Prevent error when tag or category taxonomy is empty
+2. [](#improved)
+    * Updated to MIT License
+    * Updated Readme
+    * Updated SCSS files
+    * Twig code redesigned in several templates
+3. [](#new)
+    * Added taxonomy filter in blog pages
+    * Added custom css file
+    * New metadata template
+    * Added modular bueprint
+
 # v1.0.4
 ## 03/17/2022
 
