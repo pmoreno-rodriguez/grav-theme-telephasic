@@ -7,13 +7,30 @@
 {% set taxonomy_background_color = header_var('taxonomy_background_color', [page, blog]) %}
 {% set taxonomy_font_color = header_var('taxonomy_font_color', [page, blog]) %}
 {% set collection = page.collection() %}
-
+{# Set page title by taxonomy #}
+{% if uri.param('category') %}
+  {% set listing_title = 'TELEPHASIC.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
+{% elseif uri.param('tag') %}
+  {% set listing_title = 'TELEPHASIC.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
+{% elseif uri.param('author') %}
+  {% set listing_title = 'TELEPHASIC.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
+{% elseif uri.param('archives_month') %}
+    {% set listing_title = 'TELEPHASIC.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
+{% else %}
+    {% set listing_title = page.header.subtitle|raw %}
+{% endif %}
   
   {% block content %}
     <div class="wrapper">
         <section class="container">
 
-        <section>{{ content|raw }}</section>
+        <header class="blog-heading">
+          <h1 itemprop="headline">{{ title }}</h1>
+          {% if listing_title %}
+            <p class="subtitle">{{ listing_title|raw }}</p>
+          {% endif %}
+          {{ page.content|raw }}
+        </header>
 
           
           {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
