@@ -1,0 +1,24 @@
+/* Custom styles for Telephasic Grav Theme */
+
+.blog-heading {
+	h1,h2 {
+		font-size: 2em;
+		line-height: 1.25em;
+	}
+
+	p {
+		font-size: inherit;
+		color: inherit;
+		line-height: inherit;
+		padding: 0.5em 0 1.5em 0;
+	}
+
+	p.subtitle {
+		display: block;
+		color: #f35858;
+		padding: 0.5em 0 0em 0;
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+}
+  
