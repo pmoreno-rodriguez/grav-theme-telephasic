@@ -1,12 +1,15 @@
 {% set feed_url = blog.url == '/' or blog.url == base_url_relative ? (base_url_relative~'/'~blog.slug) : blog.url %}
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
-{% set show_featuredposts = theme_var('featuredposts', [page, blog])|defined(true) %}
 
+{# Set featured posts options #}
+{% set show_featuredposts = theme_var('featuredposts', [page, blog])|defined(true) %}
+{% set featuredposts_category = theme_var('featuredposts_category')|defined('featured') %}
+{% set featuredposts_number = theme_var('featuredposts_number')|defined(3) %}
 
 <section id="sidebar">
 
 {% if show_featuredposts == true %}
-	{% include 'partials/sidebar_featuredposts.html.twig' %}
+	{% include 'partials/sidebar_featuredposts.html.twig' with { featuredposts_category, featuredposts_number } %}
 {% endif %}
 
 {% if config.plugins.simplesearch.enabled %}

@@ -1,6 +1,3 @@
-{% set featuredposts_number = theme_var('featuredposts_number') %}
-{% set featuredposts_category = theme_var('featuredposts_category') %}
-
 {# <h3>{{ 'TELEPHASIC.FEATURED'|t }}</h3> #}
 {% for page in page.evaluate({'@taxonomy.category':featuredposts_category}).order('date', 'desc').slice(0,featuredposts_number) %}
         <div class="image-wrapper">

@@ -4,6 +4,10 @@
 
 {# {% set logo = config.theme.logo ? config.theme.logo|first : {type:'image/png', path: url('theme://images/logo.png') } %} #}
 
+{# Set title and subtitle #}
+{% set title = page.title|raw %}
+{% set subtitle = page.header.subtitle|raw %}
+
 <!DOCTYPE HTML>
 <!--
 	Telephasic by HTML5 UP
