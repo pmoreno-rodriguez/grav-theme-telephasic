@@ -129,6 +129,10 @@ en:
           AUTHOR: Author
           AVATAR: Avatar Image
     BLOG:
+      LISTING_TITLE_CATEGORY: 'Posts in Category: '
+      LISTING_TITLE_TAG: 'Posts with Tag: '
+      LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+      LISTING_TITLE_MONTH: 'Post of the month: '
       ITEM:
         CONTINUE_READING: Continue reading...
         NEXT_POST: Next Post
