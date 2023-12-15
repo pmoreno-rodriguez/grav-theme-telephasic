@@ -6,7 +6,9 @@
 <h3>{{'TELEPHASIC.SIDEBAR.TAGS'|t}}</h3>
 <ul class="tags">
     {% for tax,value in taxlist[taxonomy] %}
+        {% if value is not empty %}
         <a class="label label-rounded" style="background: {{taxonomy_background_color}};color: {{taxonomy_font_color}};" href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
+        {% endif %}
     {% endfor %}
 </span>
 </ul>
