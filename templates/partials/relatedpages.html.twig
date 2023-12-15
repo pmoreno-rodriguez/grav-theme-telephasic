@@ -3,7 +3,7 @@
         {% set related = grav['pages'].get(related_path) %}
         {% if related %}
             <li>
-                <a href="{{ related.url }}" title="{{ related.title }}">{{ related.title }}</a> {% if config.plugins.relatedpages.show_score %}<span class="score">( {{ score }} )</span>
+                <a href="{{ related.url }}" title="{{ related.title }}">{{ related.title|raw }}</a> {% if config.plugins.relatedpages.show_score %}<span class="score">( {{ score }} )</span>
                 {% endif %}
             </li>
         {% endif %}

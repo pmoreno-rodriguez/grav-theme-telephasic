@@ -10,7 +10,7 @@
     </section>
     <section>
       {% for page in search_results %}
-        {% include 'partials/simplesearch_item.html.twig' with {'page':page} %}
+        {% include 'partials/simplesearch_item.html.twig' with { 'page':page, 'page_title': page.title } %}
       {% endfor %}
     </section>
 </div>

@@ -5,8 +5,11 @@
 {# {% set logo = config.theme.logo ? config.theme.logo|first : {type:'image/png', path: url('theme://images/logo.png') } %} #}
 
 {# Set title and subtitle #}
-{% set title = page.title|raw %}
-{% set subtitle = page.header.subtitle|raw %}
+{% set page_title = page.title %}
+{% set page_subtitle = page.header.subtitle %}
+
+{# Set primary Image #}
+{% set primaryImage = page.media[page.header.primaryImage] ?: page.media.images|filter((v, k) => k != page.header.avatarImage)|first %}
 
 <!DOCTYPE HTML>
 <!--
@@ -19,7 +22,7 @@
 	{% block head deferred %}
 		<link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}" />
 		<link rel="shortcut icon" href="{{ url( favicon.path ) }}">
-		<title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+		<title>{% if page_title %}{{ page_title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		{% include 'partials/metadata.html.twig' %}
@@ -27,7 +30,7 @@
 
 	{% block stylesheets %}
 		{% do assets.addCss('theme://assets/css/main'~compress) %}
-		{% do assets.addCss('theme://assets/css/custom.css', 10) %}
+		{% do assets.addCss('theme://assets/css/theme.css', 10) %}
 	{% endblock %}
 
 

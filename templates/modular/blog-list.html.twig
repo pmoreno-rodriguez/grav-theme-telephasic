@@ -2,37 +2,51 @@
 {% set blog = page.find(header_var('blog_url')|defined(theme_var('blog-page'))) %}
 {% set limit = page.header.limit|default(3) %}
 
+{# Set title and subtitle #}
+{% set page_title = page.title %}
+{% set page_subtitle = page.header.subtitle %}
+
+{# Set primary Image #}
+{% set primaryImage = page.media[page.header.primaryImage] %}
+
 	<div class="wrapper">
 		<div class="container">
 			<header>
-			    {% if page.header.primaryImage %}
-			        <img src="{{ page.media[page.header.primaryImage].cropZoom(1000,200).url|e}}" class="image featured" loading="lazy" alt="{{page.title|raw}}" /></a>
+			    {% if primaryImage %}
+					{{ primaryImage.cropZoom(1600,500).loading('lazy').attribute('decoding', 'async').attribute('itemprop', 'image').html(page_title|raw, page_title|raw, 'image featured')|raw }}
 			    {% endif %}
-			    <h2>{{page.title|raw}}</h2>
-			    {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
+			    <h2>{{ page_title|raw }}</h2>
+			    {% if page_subtitle %}<p>{{ page_subtitle|raw }}</p>{% endif %}
 			</header>
 			<div class="row">
 
 				{% for p in blog.children.order('date', 'desc').slice(0,limit) %}
-
+				
+				{# Set primary image for blog list items #}
+				{% set child_primaryImage = p.media[p.header.primaryImage] ?: p.media.images|filter((v, k) => k != p.header.avatarImage)|first %}
+				{# Set child title and child subtitle #}
+				{% set child_title = p.title %}
+				{% set child_subtitle = p.header.subtitle %}	
 					<section class="{{columns}} feature">
-					{% if p.header.primaryImage %}
+					{% if child_primaryImage %}
 						<div class="image-wrapper {% if loop.first %}first{% endif %}">
-							<a href="{{p.url}}" class="image featured {% if loop.first %}first{% endif %}"><img src="{{p.media[p.header.primaryImage].url|e}}" loading="lazy" alt="{{p.title}}" rel="nofollow" /></a>
+							<a href="{{p.url}}" {% if loop.first %}first{% endif %}">
+								{{ child_primaryImage.cropZoom(720,378).loading('lazy').attribute('decoding', 'async').attribute('itemprop', 'image').html(child_title|raw, child_title|raw, 'image featured')|raw }}
+							</a>
 						</div>
 					{% endif %}
-					{% if p.title %}
+					{% if child_title %}
 						<header class="blog-list">
-							<h3>{{p.title|raw}}</h3>
+							<h3>{{child_title|raw}}</h3>
 						</header>
 					{% endif %}
-					{% if p.header.subtitle %}
-						<h4 class="sidebar_subtitle">{{ p.header.subtitle }}</h4>
+					{% if child_subtitle %}
+						<h4 class="sidebar_subtitle">{{ child_subtitle|raw }}</h4>
 					{% endif %}
 					{% if p.summary != p.content %}
-				        <p>{{ p.summary|raw }}</p>
+				        <p>{{ p.summary|striptags|raw }}</p>
 				    {% else %}
-				        <p>{{ p.content|raw }}</p>
+				        <p>{{ p.content|striptags|raw }}</p>
 				    {% endif %}
 					
 					<ul class="actions">

@@ -1,22 +1,27 @@
-{% block content %}
 <!-- Promo -->
+{# Set title and subtitle #}
+{% set page_title = page.title %}
+{% set page_subtitle = page.header.subtitle %}
+
+{# Set primary Image #}
+{% set primaryImage = page.media[page.header.primaryImage] %}
+
 <div id="wrapper">
 	<div id="promo-wrapper">
 		<section id="promo">
-			<h2>{{page.header.title|raw}}</h2>
+			<h2>{{ page_title|raw}}</h2>
 			<a href="{{page.header.button_url}}" class="button" target="{% if page.header.button_target == true %}_blank{% else %}_self{% endif %}">{{page.header.button_text}}</a>
 		</section>
-		{% if page.content is not empty or page.header.subtitle is not empty %}
+		{% if page.content is not empty or page_subtitle is not empty %}
 			<div class="container">
 			<section>
 				{% if page.header.primaryImage %}
-	              <img src="{{ page.media[page.header.primaryImage].url|e}}" class="image" loading="lazy" alt="{{page.title}}" /></a>
+					{{ primaryImage.cropZoom(1600,500).loading('lazy').attribute('decoding', 'async').attribute('itemprop', 'image').html(page_title|raw, page_title|raw, 'image')|raw }}
 	        	{% endif %}
-				{% if page.header.subtitle %}<h3 style="color:white;">{{page.header.subtitle|raw}}</h3>{% endif %}
+				{% if page_subtitle %}<h3 style="color:white;">{{page_subtitle|raw}}</h3>{% endif %}
 				{{ page.content|raw }}
 			</section>
 			</div>
 		{% endif %}
 	</div>
 </div>
-{% endblock %}

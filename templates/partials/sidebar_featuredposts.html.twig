@@ -1,18 +1,18 @@
-{# <h3>{{ 'TELEPHASIC.FEATURED'|t }}</h3> #}
-{% for page in page.evaluate({'@taxonomy.category':featuredposts_category}).order('date', 'desc').slice(0,featuredposts_number) %}
+{% for p in page.evaluate({'@taxonomy.category':featuredposts_category}).order('date', 'desc').slice(0,featuredposts_number) %}
+{% set p_title = p.title %}
         <div class="image-wrapper">
-            {% if page.header.primaryImage %}
-                <a class="image featured" href="{{page.url}}" alt="{{page.title}}" rel="nofollow">{{ page.media[page.header.primaryImage].cropZoom(600,300).loading('lazy').html(page.title,page.title)|raw}}</a>
+            {% if p.header.primaryImage %}
+                <a class="image featured" href="{{p.url}}" alt="{{p_title|raw}}" rel="nofollow">{{ p.media[p.header.primaryImage].cropZoom(600,300).loading('lazy').html(title,title)|raw}}</a>
             {% endif %}
         </div>
-        <a href="{{ page.url }}"><h3 class="featured" itemprop="headline">{{ page.title|raw }}</h3></a>
-        {% if page.header.subtitle %}<p class="sidebar_subtitle">{{page.header.subtitle|raw}}</p>{% endif %}
-        {% if page.summary != page.content %}
-            {{ page.summary|truncate(100)|raw }}
+        <a href="{{ p.url }}"><h3 class="featured" itemprop="headline">{{ p_title|raw }}</h3></a>
+        {% if p.header.subtitle %}<p class="subtitle">{{p.header.subtitle|raw}}</p>{% endif %}
+        {% if p.summary != p.content %}
+            {{ p.summary|truncate(100)|raw }}
         {% else %}
-            {{ page.content|raw }}
+            {{ p.content|raw }}
         {% endif %}
         <ul class="actions">
-            <li><a href="{{ page.url }}" class="button">{{blog.header.readmore_text|raw|default('Read more')}}</a></li>
+            <li><a href="{{ p.url }}" class="button">{{blog.header.readmore_text|raw|default('Read more')}}</a></li>
         </ul>
 {% endfor %}

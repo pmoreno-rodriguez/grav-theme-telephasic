@@ -1,24 +1,36 @@
 {% set columns = page.header.class == 'standard' ? 'col-4 col-12-narrower' : 'col-6 col-12-narrower'  %}
 
+{# Set title and subtitle #}
+{% set page_title = page.title %}
+{% set page_subtitle = page.header.subtitle %}
+
+{# Set primary Image #}
+{% set primaryImage = page.media[page.header.primaryImage] %}
+
 <div class="wrapper">
 	<section class="container">
 
 		<header class="major">
-		    {% if page.header.primaryImage %}
-		        <img src="{{ page.media[page.header.primaryImage].cropZoom(1000,200).url|e}}" class="image featured" loading="lazy" alt="{{page.title|raw}}"  /></a>
-		    {% endif %}
-		    <h2>{{page.title|raw}}</h2>
-		    {% if page.header.subtitle %}<p>{{page.header.subtitle|raw}}</p>{% endif %}
+			{% if primaryImage %}
+			{{ primaryImage.cropZoom(1600,500).loading('lazy').attribute('decoding', 'async').attribute('itemprop', 'image').html(page_title|raw, page_title|raw, 'image featured')|raw }}
+			{% endif %}
+			<h2>{{ page_title|raw }}</h2>
+			{% if page_subtitle %}<p>{{ page_subtitle|raw }}</p>{% endif %}
 		</header>
 
 		<div class="row features">
 
 			{% for item in page.header.features2 %}
 
+			{% set item_image = page.media[item.image] %}
+
 			<section class="{{columns}} feature">
 				{% if item.image %}
+				{% set image = page.media[item.image].url %}
 					<div class="image-wrapper {% if loop.first %}first{% endif %}">
-						<a href="{{item.url}}" class="image featured {% if loop.first %}first{% endif %}"><img src="{{page.media[item.image].url}}" loading="lazy" alt="{{page.title}}" rel="nofollow" /></a>
+						<a href="{{item.url}}" class="{% if loop.first %}first{% endif %}">
+							{{ item_image.loading('lazy').attribute('rel','nofollow').attribute('decoding', 'async').html(page_title|raw, page_title|raw, 'image featured')|raw  }}
+						</a>
 					</div>
 				{% endif %}
 				{% if item.text %}

@@ -2,11 +2,13 @@
     <header>
         <div class="image-wrapper{#  {% if page.isFirst %}first{% endif %} #}">
             {% if page.header.primaryImage %}
-                <a class="image featured" href="{{page.url}}" rel="nofollow"><img src="{{ page.media[page.header.primaryImage].url|e}}" loading="lazy" alt="{{page.title}}"></a>
+                <a class="image featured" href="{{page.url}}" rel="nofollow">
+                    {{ primaryImage.cropZoom(720,378).loading('lazy').attribute('decoding', 'async').attribute('itemprop', 'image').html(page_title|raw, page_title|raw, 'image featured')|raw }}
+                </a>
             {% endif %}
         </div>
-        <a href="{{ page.url }}"><h3 itemprop="headline">{{ page.title|raw}}</h3></a>
-        <span>{{page.header.subtitle|raw}}</span>
+        <a href="{{ page.url }}"><h3 itemprop="headline">{{ page_title|raw }}</h3></a>
+        <span class="subtitle">{{ page_subtitle|raw }}</span>
     </header>
 
     {% if page.summary != page.content %}

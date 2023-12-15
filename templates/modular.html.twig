@@ -4,19 +4,17 @@
 
 {% block content %}
     
-    {% if page.content is not empty or page.header.subtitle is not empty %}
+    {% if page.content is not empty or page_subtitle is not empty %}
         <div class="wrapper modular-content">
 
         <div class="container">
-            {% if page.header.subtitle %}
+            {% if page_subtitle %}
                 <header>
-                    <h2>{{page.header.subtitle|raw}}</h2>
+                    <h2>{{ page_subtitle|raw }}</h2>
                 </header>
             {% endif %}
 
-            {% if page.header.primaryImage %}
-                  <img src="{{ page.media[page.header.primaryImage].url|e}}" class="image featured" loading="lazy" alt="{{page.title}}" /></a>
-            {% endif %}
+            {{ primaryImage.loading('lazy').attribute('decoding', 'async').attribute('itemprop', 'image').html(page_title|raw, page_title|raw, 'image featured')|raw }}
             
             {{ page.content|raw }}
         </div>
