@@ -17,7 +17,7 @@
     {% include 'partials/simplesearch_searchbox.html.twig' %}
 {% endif %}
 
-{% if config.plugins.archives.enabled %}
+{% if config.plugins.archives.enabled and archives_data is not empty %}
 	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
 {% endif %}
 
