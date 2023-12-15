@@ -11,6 +11,10 @@ en:
         CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
         CUSTOM_LOGO_MOBILE: Mobile Custom Logo
         SLOGAN: Slogan
+        CUSTOM_CSS: Load Custom CSS
+        CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
+        CUSTOM_JS: Load Custom JS
+        CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
         BLOG_DEFAULTS: Blog Defaults
         BLOG_PAGE_LABEL: Blog Page
         BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
@@ -179,6 +183,10 @@ es:
         CUSTOM_LOGO_DESCRIPTION: Este logo se usará en lugar del logo por defecto `theme://images/logo.png`
         CUSTOM_LOGO_MOBILE: Logo personalizado para dispositivos móviles
         SLOGAN: Slogan
+        CUSTOM_CSS: Cargar CSS personalizado
+        CUSTOM_CSS_HELP: Carga los estilos CSS personalizados desde theme://assets/css/custom.css
+        CUSTOM_JS: Cargar JS personalizado
+        CUSTOM_JS_HELP: Carga JS personalizado desde theme://assets/css/custom.js
         BLOG_DEFAULTS: Opciones de Blog
         BLOG_PAGE_LABEL: Página de Blog
         BLOG_PAGE_HELP: Ruta de la página de Blog cuando funciona con el blog de barra lateral
