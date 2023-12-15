@@ -1,3 +1,14 @@
+# v1.0.6
+## 12/15/2023
+
+1. [](#improved)
+    * Event hook for loading custom styles and javascripts
+    * Minor bug fixes in sidebar and taxonomy list templates
+    * Setting page title, subtitle and featured image variables in twig templates
+    * Updated traslations
+2. [](#bugfix)
+    * Fixed social icon defaults in telephasic.yaml (Issue [#13](https://github.com/pmoreno-rodriguez/grav-theme-telephasic/issues/13))
+   
 # v1.0.5
 ## 10/27/2023
 
