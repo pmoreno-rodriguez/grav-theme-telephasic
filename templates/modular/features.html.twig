@@ -1,4 +1,7 @@
-{% set columns = page.header.class == 'standard' ? 'col-4 col-12-narrower' : 'col-6 col-12-narrower'  %}
+{# Set layoutClass based on the presence of page.header.class (compatibility for versions < 1.0.6) #}
+{% set layoutClass = page.header.layout ?? page.header.class ?? 'standard' %}
+{# Use layoutClass to determine the columns value #}
+{% set columns = layoutClass == 'standard' ? 'col-4 col-12-narrower' : 'col-6 col-12-narrower' %}
 
 {# Set title and subtitle #}
 {% set page_title = page.title %}

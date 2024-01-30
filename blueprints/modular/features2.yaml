@@ -11,7 +11,7 @@ form:
           type: tab
           title: TELEPHASIC.ADMIN.MODULAR.FEATURES.TAB
           fields:
-            header.class:
+            header.layout:
               type: select
               label: TELEPHASIC.ADMIN.MODULAR.FEATURES.LAYOUT.LABEL
               default: standard
