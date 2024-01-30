@@ -1,3 +1,14 @@
+# v1.0.7
+## 01/30/2024
+
+1. [](#new)
+    * Added option to choose Hero Image and gradient colors
+2. [](#improved)
+   * Links to demo page and HTML5Up in the README have been updated.
+   * `header.class` changed to `header.layout` in features and features2 templates (maintaining backward compatibility)
+   * Updated pagination button style
+   * Updated translations
+  
 # v1.0.6
 ## 12/15/2023
 
