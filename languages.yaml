@@ -24,7 +24,10 @@ en:
           SUBTITLE: Hero Subtitle
           BUTTON_TEXT: Button text
           BUTTON_URL: Button URL
-
+          IMAGE_LABEL: Hero Background Image
+          IMAGE_DESCRIPTION: Choose the hero background image
+          GRADIENT1: First Gradient Color
+          GRADIENT2: Second Gradient Color
         FEATUREDPOSTS: Enable Featured posts in Sidebar
         FEATUREDPOSTS_NUMBER: Featured posts number to show
         FEATUREDPOSTS_NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
@@ -196,6 +199,10 @@ es:
           SUBTITLE: Subtítulo de cabecera
           BUTTON_TEXT: Texto del botón
           BUTTON_URL: URL del botón
+          IMAGE_LABEL: Imagen de fondo de la sección Hero
+          IMAGE_DESCRIPTION: Seleccione una imagen de fondo para la sección Hero
+          GRADIENT1: Primer color degradado
+          GRADIENT2: Segundo color degradado
         FEATUREDPOSTS: Activar artículos destacados en la barra lateral
         FEATUREDPOSTS_NUMBER: Número de artículos destacados a mostrar
         FEATUREDPOSTS_NUMBER_DESCRIPTION: Número de artículos destacados que se mostrarán en la barra lateral

@@ -1,3 +1,33 @@
+{% set hero_image = theme_var('hero_image') %}
+{% set hero_path = (hero_image|first).path %}
+{% set gradient_color1 = theme_var('hero_gradient_color1') %}
+{% set gradient_color2 = theme_var('hero_gradient_color2') %}
+
+{% if hero_image or gradient_color1 or gradient_color2 %}
+
+{% block stylesheets %}
+    {% set styles %}
+        #header-wrapper {
+            background-image: url({{hero_path}});
+            background-image: url("images/overlay.png"), url({{hero_path}}), -moz-linear-gradient(75deg, {{ gradient_color1 }} 15%, {{ gradient_color2 }} 55%);
+            background-image: url("images/overlay.png"), url({{hero_path}}), -webkit-linear-gradient(75deg, {{ gradient_color1 }} 15%, {{ gradient_color2 }} 55%);
+            background-image: url("images/overlay.png"), url({{hero_path}}), -ms-linear-gradient(75deg, {{ gradient_color1 }} 15%, {{ gradient_color2 }} 55%);
+            background-image: url("images/overlay.png"), url({{hero_path}}), linear-gradient(75deg, {{ gradient_color1 }} 15%, {{ gradient_color2 }} 55%);
+            background-color: {{ gradient_color1 }};
+			background-color: {{ gradient_color1 }};
+        }
+		.homepage #header-wrapper {
+			background-size: 100% 100%;
+		}
+		#hero .button {
+			color: {{ gradient_color1 }}
+		}
+		{% endset %}
+		{% do assets.addInlineCss(styles) %}
+{% endblock %}
+
+{% endif %}
+
 <!-- Hero -->
 
 <section id="hero" class="container">

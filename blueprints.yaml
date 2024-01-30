@@ -1,18 +1,18 @@
 name: Telephasic
 slug: telephasic
 type: theme
-version: 1.0.6
+version: 1.0.7
 description: "Telephasic Grav Theme (ported from HTML5Up)"
 icon: group
 author:
   name: Pedro Moreno
-  email: pmoreno.rodriguez@outlook.com
+  email: pmoreno@pmdesign.dev
   url: https://github.com/pmoreno-rodriguez/grav-theme-telephasic
 homepage: https://github.com/pmoreno-rodriguez/grav-theme-telephasic
 keywords: telephasic, minimalist, theme, modern, fast, responsive, html5, css3, blog
 bugs: https://github.com/pmoreno-rodriguez/grav-theme-telephasic/issues
 license: CC-BY-3.0
-demo: http://telephasic.juanvillen.es
+demo: https://telephasic.pmdesign.dev
 
 dependencies:
   - { name: grav, version: '>=1.7.0' }
@@ -152,6 +152,23 @@ form:
           hero_button_url:
             type: text 
             label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.BUTTON_URL
+          hero_image:
+            type: file
+            label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.IMAGE_LABEL
+            description: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.IMAGE_DESCRIPTION
+            destination: 'theme@:/images/hero'
+            multiple: false
+            avoid_overwriting: false
+            random_name: false
+            filesize: 3
+            accept:
+              - 'image/*'
+          hero_gradient_color1:
+            type: colorpicker
+            label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.GRADIENT1
+          hero_gradient_color2:
+            type: colorpicker
+            label: TELEPHASIC.ADMIN.THEME.HERO_OPTIONS.GRADIENT2
 
     footer:
         type: fieldset

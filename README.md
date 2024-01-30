@@ -2,11 +2,11 @@
 
 ![Telephasic](screenshot.jpg)
 
-Telephasic by [HTML5UP](http://www.html5up.net), a responsive website template built with standards-compliant HTML and CSS. Includes HTML files, stylesheets, all supporting image and JS assets, and optional Sass sources.
+Telephasic by [HTML5UP](https://html5up.net/telephasic), a responsive website template built with standards-compliant HTML and CSS. Includes HTML files, stylesheets, all supporting image and JS assets, and optional Sass sources.
 
 The theme from HTML5Up.net is free for personal and commercial use under the [CCA 3.0 license](https://html5up.net/license).
 
-# Features
+## Features
 
 * HTML5 and CSS3
 * Fully Responsive
@@ -37,6 +37,9 @@ hero_title:                   # Title for hero section in Homepage
 hero_subtitle:                # Subtitle for hero section in Homepage
 hero_button_text:             # Button text for hero section in Homepage
 hero_button_url:              # Button URL for hero section in Homepage
+hero_image:                   # Image for Hero Section
+hero_gradient_color1:         # Color of first gradient for Hero section 
+hero_gradient_color2:         # Color of second gradient for Hero section
 contact_enabled:              # Enable/Disable contact form in Homepage
 contact_title:                # Title for contact form in Homepage
 contact_subtitle:             # Subtitle for contact form in Homepage
@@ -48,7 +51,7 @@ To make modifications, you can copy the `user/themes/telephasic/editorial.yaml` 
 
 > NOTE: Do not modify the `user/themes/telephasic/telephasic.yaml` file directly or your changes will be lost with any updates
 
-## Custom Logos
+### Custom Logos
 
 To add a custom logo, you should put the log into the `user/themes/telephasic/images/logo` folder.  Standard image formats are support (`.png`,`.jpg`, `.gif`, `.svg`, etc.).  Then reference the logo via the YAML like so:
 
@@ -60,14 +63,18 @@ custom_logo_mobile:
 ```
 Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Telephasic theme options.
 
-# Installation
+### Hero Section
+
+> NOTE: The Hero section is ready to display any image and gradient colors you want. However, if you do not select any images or gradient colors, the default image and gradient colors of the theme will be displayed. You can also choose just the gradient colors, without including any images.
+
+## Installation
 
 Installing the Telephasic theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
 The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton.
 
 
-## GPM Installation (Preferred)
+### GPM Installation (Preferred)
 
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
@@ -75,7 +82,7 @@ The simplest way to install this theme is via the [Grav Package Manager (GPM)](h
 
 This will install the Telephasic theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/telephasic`.
 
-## Manual Installation
+### Manual Installation
 
 To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `telephasic`. You can find these files either on [GitHub](https://github.com/pmoreno-rodriguez/grav-theme-telephasic) or via [GetGrav.org](http://getgrav.org/downloads/themes).
 
@@ -85,7 +92,7 @@ You should now have all the theme files under
 
 >> NOTE: This theme is a modular component for Grav which requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/gravplugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins.
 
-# Updating
+### Updating
 
 As development for the Telephasic theme continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating Telephasic is easy, and can be done through Grav's GPM system, as well as manually.
 
@@ -97,7 +104,7 @@ The simplest way to update this theme is via the [Grav Package Manager (GPM)](ht
 
 This command will check your Grav install to see if your Telephasic theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
 
-## Manual Update
+### Manual Update
 
 Manually updating Telephasic is pretty simple. Here is what you will need to do to get this done:
 
@@ -108,7 +115,7 @@ Manually updating Telephasic is pretty simple. Here is what you will need to do 
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
-# Setup
+## Setup
 
 If you want to set Telephasic as the default theme, you can do so by following these steps:
 
@@ -120,14 +127,14 @@ If you want to set Telephasic as the default theme, you can do so by following t
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **telephasic** folder.
 
-# Contact Form Configuration
+## Contact Form Configuration
 For contact form configuration instructions please refer to [official documentation](http://learn.getgrav.org/forms/forms/example-form). Make sure you installed Email and Form plugin though.
 
-# Demo page
+## Demo page
 
-[http://telephasic.juanvillen.es/](http://telephasic.juanvillen.es/)
+[https://telephasic.pmdesign.dev/](https://telephasic.pmdesign.dev/)
 
-# To Do
+## To Do
 
 * Add Webp option in twig templates with images.
 * Implement Logo Option to Header (in progress)
