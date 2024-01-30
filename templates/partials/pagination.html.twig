@@ -3,7 +3,7 @@
 
 {% if pagination|length > 1 %}
 
-<ul class="actions pagination">
+<ul class="actions major">
     {% if pagination.hasPrev %}
         {% set url =  (base_url ~ pagination.params ~ pagination.prevUrl)|replace({'//':'/'}) %}
         <li><a class="button" rel="prev" href="{{ url }}">{{'TELEPHASIC.BLOG.PAGINATION.PREVIOUS'|t}}</a></li>
