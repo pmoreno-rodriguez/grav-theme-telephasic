@@ -138,3 +138,11 @@ For contact form configuration instructions please refer to [official documentat
 
 * Add Webp option in twig templates with images.
 * Implement Logo Option to Header (in progress)
+
+## ☕ Support This Project
+If you find this project useful and would like to support its development,
+you can buy me a coffee on Ko-fi:
+
+👉 **[Support me on Ko-fi](https://ko-fi.com/pmoreno)**
+
+Thank you for supporting open-source software! 🙌
