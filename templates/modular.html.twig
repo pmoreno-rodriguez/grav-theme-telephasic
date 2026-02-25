@@ -10,22 +10,26 @@
         <div class="container">
             {% if page_subtitle %}
                 <header>
-                    <h2>{{ page_subtitle|raw }}</h2>
+                    <h2>{{ page_subtitle|striptags|e }}</h2>
                 </header>
             {% endif %}
-
-            {{ primaryImage.loading('lazy').attribute('decoding', 'async').attribute('itemprop', 'image').html(page_title|raw, page_title|raw, 'image featured')|raw }}
-            
+            {% if primaryImage is defined and primaryImage %}
+                {{ primaryImage
+                    .loading('lazy')
+                    .decoding('async')
+                    .attribute('itemprop', 'image')
+                    .html(page_title, page_title, 'image featured')|raw }}
+            {% endif %}
             {{ page.content|raw }}
         </div>
 
         </div>
     {% endif %}
-
+{% if modules is defined and modules|length > 0 %}
     {% for module in modules %}
         {{ module.content|raw }}
     {% endfor %}
-
+{% endif %}
 
 {% endblock %}
 

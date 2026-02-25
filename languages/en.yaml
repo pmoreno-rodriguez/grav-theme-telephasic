@@ -1,0 +1,180 @@
+TELEPHASIC:
+    ADMIN:
+      THEME:
+        DROPDOWN_MENU: Dropdown in navbar
+        PRODUCTION_MODE: Production Mode
+        PRODUCTION_MODE_HELP: When enabled, TELEPHASIC will render with minified CSS
+        FAVICON: Choose your own favicon
+        CUSTOM_FAVICON_DESCRIPTION: Will be used instead of default favicon `theme://images/favicon.png`
+        CUSTOM_LOGO: Custom Logo
+        CUSTOM_LOGO_DESCRIPTION: Will be used instead of default logo `theme://images/logo.png`
+        CUSTOM_LOGO_MOBILE: Mobile Custom Logo
+        SLOGAN: Slogan
+        CUSTOM_CSS: Load Custom CSS
+        CUSTOM_CSS_HELP: Load custom CSS styles from theme://assets/css/custom.css
+        CUSTOM_JS: Load Custom JS
+        CUSTOM_JS_HELP: Load custom JS from theme://assets/css/custom.js
+        SETTINGS: Settings
+        SETTINGS_DESCRIPTION: '<strong style="background:#0090D9; padding:5px 8px; color: #ffffff; font-size: 1.5rem;display:inline-block;"><i class="fa fa-gear" style="margin-right:4px;"></i>Settings</strong>'
+        THEME_TABS:
+          SETTINGS: Theme
+          BLOG: Blog
+          HERO: Hero
+          FOOTER: Footer
+          SOCIALS: Social
+        BLOG_PAGE_LABEL: Blog Page
+        BLOG_PAGE_HELP: The route to the blog page when working with blog sidebar
+        HERO_OPTIONS:
+          TITLE: Hero Title
+          SUBTITLE: Hero Subtitle
+          BUTTON_TEXT: Button text
+          BUTTON_URL: Button URL
+          IMAGE_LABEL: Hero Background Image
+          IMAGE_DESCRIPTION: Choose the hero background image
+          GRADIENT1: First Gradient Color
+          GRADIENT2: Second Gradient Color
+        FEATUREDPOSTS: Enable Featured posts in Sidebar
+        FEATUREDPOSTS_NUMBER: Featured posts number to show
+        FEATUREDPOSTS_NUMBER_DESCRIPTION: Number of featured posts that will be showed in sidebar
+        FEATUREDPOSTS_CATEGORY: Featured category
+        FEATUREDPOSTS_CATEGORY_DESCRIPTION: Set name to featured category.<br />`You must include this name in Options->Taxonomy->Category`
+        FOOTER: 
+          CONTACT:
+            ENABLED_HOMEPAGE: '<b>Contact Form enabled at homepage</b>'
+            FORM_TITLE: Contact Form Title
+            FORM_SUBTITLE: Contact Form Subtitle
+            TITLE: Contact Us
+            SUBTITLE: Send Us your comments
+            BUTTON_URL: Button URL
+          SOCIALS:
+            ENABLED: '<b>Enable Social Icons</b>'
+            ICONS: Social Icons
+            ICON_NAME: Social Name
+            ICON_URL: Social Link
+            ICON_ICON: Social Icon
+            ICON_HELP: 'Use <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">Font Awesome</a> icon names'
+          COPYRIGHT:
+            AUTHOR: Website author
+            RIGHTS: Text for author rights
+      DEFAULT:
+        PRIMARY_IMAGE: Primary image
+      MODULAR:
+        BANNER:
+          TAB: Banner
+          SUBTITLE: Subtitle
+          BUTTON_TEXT: Button Text
+          BUTTON_URL: Button URL
+          IMAGE: Image
+          IMAGE_DESCRIPTION: Select one image
+        FEATURES:
+          TAB: Features
+          LAYOUT: 
+            LABEL: Layout
+            TWOCOLS: Medium   = 2 / 1 columns
+            THREECOLS: Standard  = 3 / 2 / 1 columns
+          HEADER: Features
+          IMAGE: Image
+          TITLE: Title
+          TEXT: Text
+          BUTTON_TEXT: Button Text
+          BUTTON_URL: Button URL
+          BUTTON_URL_TARGET: Open URL in a new window
+        PROMO:
+          TAB: Promo
+          OPTIONS: Options
+          BUTTON_TEXT: Button Text
+          BUTTON_URL: Button URL
+          BUTTON_TARGET: Open link in new window or tab
+        RECENT_POSTS:
+          TAB: Recent Posts
+          LAYOUT:
+            LABEL: Layout
+            TWO_COLS: Medium   = 2 / 1 columns
+            THREE_COLS: Standard  = 3 / 2 / 1 columns
+          LIMIT: Limit 
+      BLOG:
+        TAB: Blog Config
+        BLOG_ROUTE: Blog Route
+        BLOG_HELP: The route to the main blog page that contains the "Show ..." configuration
+        CONTENT:
+          TITLE: Content Definition
+          CONFIGURATION: Configuration
+          SHOW_BREADCRUMBS: Show Breadcrumbs
+          SHOW_SIDEBAR: Show Sidebar
+          SHOW_PAGINATION: Show Pagination
+          READMORE_TEXT: Readmore button text
+          READMORE_TEXT_DESCRIPTION: Set custom text for Read more button
+          ITEMS: 
+            ITEMS: Items
+            LIMIT: Max Item Count
+            ORDER:
+              BY: Order By
+              BY_DATE: Date
+              BY_TITLE: Title
+              BY_FOLDER: Folder
+              BY_DEFAULT: Default
+              DIR: Direction
+              DIR_ASC: Ascending
+              DIR_DESC: Descending
+            PAGINATION: Pagination
+        TAXONOMY:
+          TITLE: Taxonomy Options
+          URL_TAXONOMY_FILTERS: URL Taxonomy Filters
+          TAXONOMY_SEE_OTHER_POSTS: See other posts of
+          TAXONOMY_FONT_COLOR:  Font color for taxonomy
+          TAXONOMY_BACKGROUND_COLOR: Background color for taxonomy
+      ITEM:
+        TAB: Blog Item
+        CONTENT:
+          OPTIONS:
+            LABEL: Options 
+            SUMMARY:
+              SUMMARY: Summary Item
+              ENABLED: Enabled Summary
+              FORMAT: Summary Format
+              FORMAT_SHORT: Use the first occurence of delimter or size
+              FORMAT_LONG: Summary delimiter will be ignored
+              SUMMARY_SIZE: Size
+              SUMMARY_DELIMITER: Summary Delimiter
+          ORDER: Minipost Order
+          SUBTITLE: Subtitle
+          AUTHOR: Author
+          AVATAR: Avatar Image
+    BLOG:
+      LISTING_TITLE_CATEGORY: 'Posts in Category: '
+      LISTING_TITLE_TAG: 'Posts with Tag: '
+      LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+      LISTING_TITLE_MONTH: 'Post of the month: '
+      ITEM:
+        CONTINUE_READING: Continue reading...
+        NEXT_POST: Next Post
+        PREV_POST: Previous Post
+      PAGINATION:
+        PREVIOUS: Previous
+        NEXT: Next
+      SEARCH:
+        RESULTS: Search Results
+
+    SIDEBAR:
+      SIMPLE_SEARCH:
+        HEADLINE: Search
+      RELATED_POSTS:
+        HEADLINE: Related Posts
+      RANDOM_ARTICLE:
+        HEADLINE: Random Article
+        FEELING_LUCKY: I'm Feeling Lucky!
+      SOME_TEXT_WIDGET:
+        HEADLINE: Some Text Widget
+      TAGS:
+        HEADLINE: Tags
+      POPULAR_TAGS:
+        HEADLINE: Popular Tags
+      ARCHIVES:
+        HEADLINE: Archives
+      SYNDICATE:
+        HEADLINE: Syndicate
+    LOGIN: Log in
+    LATESTPOSTS: Latest posts
+    FEATURED: Featured
+    PRIVACY: By using this form you agree to our
+    FORM_SUMMARY: Here is the summary of what you wrote to us

@@ -1,3 +1,11 @@
+# v1.0.8
+## 02/25/2026
+
+1. [](#improved)
+   * Updated minimum Grav requirement to `>= 1.7.45` to use the latest Grav image filters in templates.
+   * Added missing Spanish translations for theme tabs and social icon help text.
+   * Minor CSS and template clean‑ups.
+
 # v1.0.7
 ## 01/30/2024
 
