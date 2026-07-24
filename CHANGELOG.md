@@ -1,3 +1,13 @@
+# v1.1.0
+## 07/24/2026
+
+1. [](#new)
+   * Added Grav 1.7 and 2.0 compatibility flags
+
+2. [](#improved)
+   * Updated Language API call from `getActive()` to `getLanguage` for Grav 2.0 compatibility
+   * Aligned form template with Form plugin changes and improvements
+
 # v1.0.8
 ## 02/25/2026
 
@@ -104,4 +114,4 @@ Initial Commit
     * Cross browser compatible
     * Avatar option for blog items
     * Lazy loading for images in twig templates
-    * CSS Styles added over the original theme. 
+    * CSS Styles added over the original theme.
